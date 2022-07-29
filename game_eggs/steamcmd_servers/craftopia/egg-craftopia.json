@@ -4,10 +4,10 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2022-07-19T15:47:00+02:00",
-    "name": "Craftopia",
-    "author": "info@goover.de",
-    "description": "Craftopia is the brand new multiplayer survival action game made in Japan. We combined many features we find enjoyable, such as hunting, farming, hack-and-slash, building, automation to develop this game.",
+    "exported_at": "2022-07-25T09:39:18+08:00",
+    "name": "Craftopia-创世理想乡",
+    "author": "AOPKCN@qq.com",
+    "description": "Craftopia 是日本制造的全新多人生存动作游戏。 我们结合了许多我们觉得有趣的功能，例如狩猎、耕作、砍杀、建筑、自动化来开发这款游戏。",
     "features": [
         "steam_disk_space"
     ],
@@ -16,11 +16,11 @@
     },
     "file_denylist": [],
     "startup": ".\/Craftopia.x86_64",
-    "config": {
-        "files": "{\r\n    \"ServerSetting.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"GameWorld.name=\": \"{{server.build.env.WORLD_NAME}}\",\r\n            \"Host.port=\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
-        "startup": "{\r\n    \"done\": \"World is loaded!\"\r\n}",
-        "logs": "{}",
-        "stop": "^^C"
+        "config": {
+            "files": "{\r\n    \"ServerSetting.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"GameWorld.name\": \"{{server.build.env.WORLD_NAME}}\",\r\n            \"GameWorld.difficulty\": \"{{server.build.env.WORLD_DIFFICULTY}}\",\r\n            \"GameWorld.gameMode\": \"{{server.build.env.WORLD_GAMEMODE}}\",\r\n            \"Host.port\": \"{{server.build.default.port}}\",\r\n            \"Host.maxPlayerNumber\": \"{{server.build.env.HOST_MAXPLAYERNUMBER}}\",\r\n            \"Host.usePassword\": \"{{server.build.env.HOST_USEPASSWORD}}\",\r\n            \"Host.serverPassword\": \"{{server.build.env.HOST_SERVERPASSWORD}}\",\r\n            \"Host.bindAddress\": \"{{server.build.env.HOST_BINDADDRESS}}\",\r\n            \"Graphics.vSyncCount\": \"{{server.build.env.GRAPHICS_VSYNCCOUNT}}\",\r\n            \"Graphics.maxFPS\": \"{{server.build.env.GRAPHICS_MAXFPS}}\",\r\n            \"Graphics.grassBend\": \"{{server.build.env.GRAPHICS_GRASSBEND}}\",\r\n            \"Graphics.clothSimOption\": \"{{server.build.env.GRAPHICS_CLOTHSIMOPTION}}\",\r\n            \"Save.autoSaveSec\": \"{{server.build.env.SAVE_AUTOSAVESEC}}\",\r\n            \"Save.autoSavePerHour\": \"{{server.build.env.SAVE_AUTOSAVEPERHOUR}}\",\r\n            \"Save.savePath\": \"{{server.build.env.SAVE_SAVEPATH}}\",\r\n            \"CreativeModeSetting.quickCraft\": \"{{server.build.env.CREATIVEMODESETTING_QUICKCRAFT}}\",\r\n            \"CreativeModeSetting.ageLevel\": \"{{server.build.env.CREATIVEMODESETTING_AGELEVEL}}\",\r\n            \"CreativeModeSetting.islandLevel\": \"{{server.build.env.CREATIVEMODESETTING_ISLANDLEVEL}}\",\r\n            \"CreativeModeSetting.noDeath\": \"{{server.build.env.CREATIVEMODESETTING_NODEATH}}\",\r\n            \"CreativeModeSetting.noDamage\": \"{{server.build.env.CREATIVEMODESETTING_NODAMAGE}}\",\r\n            \"CreativeModeSetting.noHunger\": \"{{server.build.env.CREATIVEMODESETTING_NOHUNGER}}\",\r\n            \"CreativeModeSetting.infinitStamina\": \"{{server.build.env.CREATIVEMODESETTING_INFINITSTAMINA}}\",\r\n            \"CreativeModeSetting.forceDayTime\": \"{{server.build.env.CREATIVEMODESETTING_FORCEDAYTIME}}\",\r\n            \"CreativeModeSetting.buildingIgnoreDamage\": \"{{server.build.env.CREATIVEMODESETTING_BUILDINGIGNOREDAMAGE}}\",\r\n            \"CreativeModeSetting.noBuild\": \"{{server.build.env.CREATIVEMODESETTING_NOBUILD}}\",\r\n            \"CreativeModePlStatus.Level\": \"{{server.build.env.CREATIVEMODEPLSTATUS_LEVEL}}\",\r\n            \"CreativeModePlStatus.Health\": \"{{server.build.env.CREATIVEMODEPLSTATUS_HEALTH}}\",\r\n            \"CreativeModePlStatus.Mana\": \"{{server.build.env.CREATIVEMODEPLSTATUS_MANA}}\",\r\n            \"CreativeModePlStatus.Stamina\": \"{{server.build.env.CREATIVEMODEPLSTATUS_STAMINA}}\",\r\n            \"CreativeModePlStatus.Money\": \"{{server.build.env.CREATIVEMODEPLSTATUS_MONEY}}\",\r\n            \"CreativeModePlStatus.SkillPoint\": \"{{server.build.env.CREATIVEMODEPLSTATUS_SKILLPOINT}}\",\r\n            \"CreativeModePlStatus.EnchantPoint\": \"{{server.build.env.CREATIVEMODEPLSTATUS_ENCHANTPOINT}}\"\r\n        }\r\n    }\r\n}",
+            "startup": "{\r\n    \"done\": \"World is loaded!\"\r\n}",
+            "logs": "{}",
+            "stop": "^^C"
     },
     "scripts": {
         "installation": {
@@ -31,8 +31,308 @@
     },
     "variables": [
         {
-            "name": "SRCDS_APPID",
-            "description": "",
+            "name": "世界名称",
+            "description": "游戏世界名称",
+            "env_variable": "WORLD_NAME",
+            "default_value": "AOPK Server",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:50",
+            "field_type": "text"
+        },
+        {
+            "name": "游戏难度",
+            "description": "0-简单1-普通（默认）2-困难3-非常困难",
+            "env_variable": "WORLD_DIFFICULTY",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "游戏模式",
+            "description": "1-普通世界(默认)2-创意模式_构建3-创意模式_玩家",
+            "env_variable": "WORLD_GAMEMODE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "玩家数量",
+            "description": "可以加入服务器的最大玩家数(1~127)",
+            "env_variable": "HOST_MAXPLAYERNUMBER",
+            "default_value": "10",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "启用服务器密码",
+            "description": "使用服务器密码(1-开启/0-关闭)",
+            "env_variable": "HOST_USEPASSWORD",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "服务器密码",
+            "description": "设置服务器密码最多 8 位数字密码",
+            "env_variable": "HOST_SERVERPASSWORD",
+            "default_value": "123456",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "客服端垂直同步",
+            "description": "0-禁用，1-每帧/次，2-每次2帧数",
+            "env_variable": "GRAPHICS_VSYNCCOUNT",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "客户端FPS",
+            "description": "每秒最大帧数，设置为-1表示无限制fps",
+            "env_variable": "GRAPHICS_MAXFPS",
+            "default_value": "-1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "动态模糊",
+            "description": "1-开启 / 0-关闭",
+            "env_variable": "GRAPHICS_GRASSBEND",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "反锯齿",
+            "description": "1-每个人，2无",
+            "env_variable": "GRAPHICS_CLOTHSIMOPTION",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "自动保存",
+            "description": "每**秒自动保存，禁用，设置为-1",
+            "env_variable": "SAVE_AUTOSAVESEC",
+            "default_value": "300",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "启用每小时保存",
+            "description": "启用每小时自动保存（1- 开启 / 0- 关闭）",
+            "env_variable": "SAVE_AUTOSAVEPERHOUR",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "存档路径",
+            "description": "基于 ServerSetting.ini 文件夹的相对路径或绝对路径",
+            "env_variable": "SAVE_SAVEPATH",
+            "default_value": "DedicatedServerSave/",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "无制作需求",
+            "description": "在不检查项目成本的情况下制作(1-开启/0-关闭)",
+            "env_variable": "CREATIVEMODESETTING_QUICKCRAFT",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "世界等级",
+            "description": "游戏世界的年龄等级，效果制作配方",
+            "env_variable": "CREATIVEMODESETTING_AGELEVEL",
+            "default_value": "7",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "生物和地牢等级",
+            "description": "岛屿等级覆盖，效果怪物和地牢等级，设置为-1禁用",
+            "env_variable": "CREATIVEMODESETTING_ISLANDLEVEL",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "玩家不会死亡",
+            "description": "玩家角色不会死(1-开启/0-关闭)",
+            "env_variable": "CREATIVEMODESETTING_NODEATH",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "玩家不受伤害",
+            "description": "玩家角色不会受到伤害(1-开启/0-关闭)",
+            "env_variable": "CREATIVEMODESETTING_NODAMAGE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "无限饥饿",
+            "description": "玩家角色不会饿(1-开启/0-关闭)",
+            "env_variable": "CREATIVEMODESETTING_NOHUNGER",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "无限耐力",
+            "description": "玩家角色拥有无限耐力(1-开启/0-关闭)",
+            "env_variable": "CREATIVEMODESETTING_INFINITSTAMINA",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "游戏时间",
+            "description": "游戏世界日时间覆盖，0到24，设置为-1禁用",
+            "env_variable": "CREATIVEMODESETTING_FORCEDAYTIME",
+            "default_value": "-1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "建筑无敌",
+            "description": "建筑物不会受到伤害(1-开启/0-关闭)",
+            "env_variable": "CREATIVEMODESETTING_BUILDINGIGNOREDAMAGE",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "禁止建筑",
+            "description": "玩家不能放置新建筑(1-开启/0-关闭)",
+            "env_variable": "CREATIVEMODESETTING_NOBUILD",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "创意模式玩家等级",
+            "description": "玩家等级",
+            "env_variable": "CREATIVEMODEPLSTATUS_LEVEL",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "创意模式玩家健康",
+            "description": "设置为 0 禁用",
+            "env_variable": "CREATIVEMODEPLSTATUS_HEALTH",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "创意模式玩家法力",
+            "description": "设置为 0 禁用",
+            "env_variable": "CREATIVEMODEPLSTATUS_MANA",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "创意模式玩家耐力",
+            "description": "设置为 0 禁用",
+            "env_variable": "CREATIVEMODEPLSTATUS_STAMINA",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "创意模式玩家金钱",
+            "description": "默认1000",
+            "env_variable": "CREATIVEMODEPLSTATUS_MONEY",
+            "default_value": "1000",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "创意模式玩家技能点",
+            "description": "角色技能点",
+            "env_variable": "CREATIVEMODEPLSTATUS_SKILLPOINT",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "创意模式玩家附魔点",
+            "description": "角色附魔点",
+            "env_variable": "CREATIVEMODEPLSTATUS_ENCHANTPOINT",
+            "default_value": "0",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "游戏ID",
+            "description": "游戏ID",
             "env_variable": "SRCDS_APPID",
             "default_value": "1670340",
             "user_viewable": false,
@@ -41,23 +341,23 @@
             "field_type": "text"
         },
         {
-            "name": "Auto Update",
-            "description": "",
+            "name": "服务器IP",
+            "description": "服务器地址",
+            "env_variable": "HOST_BINDADDRESS",
+            "default_value": "0.0.0.0",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20",
+            "field_type": "text"
+        },
+        {
+            "name": "自动更新",
+            "description": "启动自动更新0禁止/1开启",
             "env_variable": "AUTO_UPDATE",
             "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string|max:20",
-            "field_type": "text"
-        },
-        {
-            "name": "World Name",
-            "description": "",
-            "env_variable": "WORLD_NAME",
-            "default_value": "Pterodactyl Server",
-            "user_viewable": true,
-            "user_editable": true,
-            "rules": "required|string|max:50",
             "field_type": "text"
         }
     ]
