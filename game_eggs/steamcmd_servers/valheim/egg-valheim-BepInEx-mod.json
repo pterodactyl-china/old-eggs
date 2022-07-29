@@ -1,0 +1,142 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2022-05-15T11:15:06+02:00",
+    "name": "Valheim BepInEx模组",
+    "author": "aopkcn@qq.com",
+    "description": "1-10 名玩家的残酷探索和生存游戏，设置在受维京文化启发的程序生成的炼狱中.",
+    "features": [
+        "steam_disk_space"
+    ],
+    "images": [
+        "ghcr.io\/parkervcp\/games:source"
+    ],
+    "file_denylist": [],
+    "startup": "export DOORSTOP_ENABLE=TRUE; export DOORSTOP_INVOKE_DLL_PATH=.\/BepInEx\/core\/BepInEx.Preloader.dll; export DOORSTOP_CORLIB_OVERRIDE_PATH=.\/unstripped_corlib; export LD_LIBRARY_PATH=\".\/doorstop_libs:$LD_LIBRARY_PATH\"; export LD_PRELOAD=\"libdoorstop_x64.so:$LD_PRELOAD\"; export templdpath=$LD_LIBRARY_PATH; export LD_LIBRARY_PATH=\".\/linux64:$LD_LIBRARY_PATH\"; export SteamAppId=892970; export LD_LIBRARY_PATH=$templdpath; .\/valheim_server.x86_64 -nographics -batchmode -name \"{{SERVER_NAME}}\" -port {{SERVER_PORT}} -world \"{{WORLD}}\" -password \"{{PASSWORD}}\" -public ${PUBLIC} > >(sed -uE \"{{FILTER}}\") & trap \"{{STOP}}\" 15; wait $!",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"DungeonDB Start\"\r\n}",
+        "logs": "{}",
+        "stop": "^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n# Valheim Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\n# Image to install with is 'debian:buster-slim'\r\napt -y update\r\napt -y --no-install-recommends --no-install-suggests install curl lib32gcc-s1 ca-certificates unzip jq wget\r\n\r\n## just in case someone removed the defaults.\r\nif [ \"${STEAM_USER}\" == \"\" ]; then\r\n    echo -e \"steam user is not set.\\n\"\r\n    echo -e \"Using anonymous user.\\n\"\r\n    STEAM_USER=anonymous\r\n    STEAM_PASS=\"\"\r\n    STEAM_AUTH=\"\"\r\nelse\r\n    echo -e \"user set to ${STEAM_USER}\"\r\nfi\r\n\r\n## download and install steamcmd\r\ncd \/tmp\r\nmkdir -p \/mnt\/server\/steamcmd\r\ncurl -sSL -o steamcmd.tar.gz https:\/\/steamcdn-a.akamaihd.net\/client\/installer\/steamcmd_linux.tar.gz\r\ntar -xzvf steamcmd.tar.gz -C \/mnt\/server\/steamcmd\r\ncd \/mnt\/server\/steamcmd\r\n\r\n# SteamCMD fails otherwise for some reason, even running as root.\r\n# This is changed at the end of the install process anyways.\r\nchown -R root:root \/mnt\r\nexport HOME=\/mnt\/server\r\n\r\n## install game using steamcmd\r\n.\/steamcmd.sh +force_install_dir \/mnt\/server +login ${STEAM_USER} ${STEAM_PASS} ${STEAM_AUTH} +app_update ${SRCDS_APPID} ${EXTRA_FLAGS} +quit\r\n\r\n## set up 32 bit libraries\r\nmkdir -p \/mnt\/server\/.steam\/sdk32\r\ncp -v linux32\/steamclient.so ..\/.steam\/sdk32\/steamclient.so\r\n\r\n## set up 64 bit libraries\r\nmkdir -p \/mnt\/server\/.steam\/sdk64\r\ncp -v linux64\/steamclient.so ..\/.steam\/sdk64\/steamclient.so\r\n\r\n## get release info and download links\r\nLATEST_JSON=$(curl --silent \"https:\/\/api.github.com\/repos\/${GITHUB_PACKAGE}\/releases\/latest\")\r\nRELEASES=$(curl --silent \"https:\/\/api.github.com\/repos\/${GITHUB_PACKAGE}\/releases\")\r\n\r\nif [ -z \"${VERSION}\" ] || [ \"${VERSION}\" == \"latest\" ]; then\r\n    DOWNLOAD_LINK=$(echo ${LATEST_JSON} | jq .assets | jq -r .[].browser_download_url | grep -i ${MATCH})\r\nelse\r\n    VERSION_CHECK=$(echo ${RELEASES} | jq -r --arg VERSION \"${VERSION}\" '.[] | select(.tag_name==$VERSION) | .tag_name')\r\n    if [ \"${VERSION}\" == \"${VERSION_CHECK}\" ]; then\r\n        DOWNLOAD_LINK=$(echo ${RELEASES} | jq -r --arg VERSION \"${VERSION}\" '.[] | select(.tag_name==$VERSION) | .assets[].browser_download_url' | grep -i ${MATCH})\r\n    else\r\n        echo -e \"defaulting to latest release\"\r\n        DOWNLOAD_LINK=$(echo ${LATEST_JSON} | jq .assets | jq -r .[].browser_download_url)\r\n    fi\r\nfi\r\n\r\ncd \/mnt\/server\r\nwget -N $DOWNLOAD_LINK\r\nunzip -o $MATCH\r\nrm -fR $MATCH\r\nrm -fR \/mnt\/server\/BepInEx\/plugins\/ValheimPlus.dll\r\nchmod u+x start_server_bepinex.sh",
+            "container": "ghcr.io\/parkervcp\/installers:debian",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "服务器名称",
+            "description": "服务器浏览器中显示的名称.",
+            "env_variable": "SERVER_NAME",
+            "default_value": "My Server",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:60"
+        },
+        {
+            "name": "服务器密码",
+            "description": "服务器密码默认123456.",
+            "env_variable": "PASSWORD",
+            "default_value": "123456",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|min:5|max:20"
+        },
+        {
+            "name": "世界名称",
+            "description": "在多个已保存世界之间切换时要加载的名称.",
+            "env_variable": "WORLD",
+            "default_value": "Dedicated",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "App ID",
+            "description": "用于自动更新的 Valheim steam游戏 ID。",
+            "env_variable": "SRCDS_APPID",
+            "default_value": "896660",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "nullable|numeric"
+        },
+        {
+            "name": "LD 库路径",
+            "description": "加载服务器库所需.",
+            "env_variable": "LD_LIBRARY_PATH",
+            "default_value": ".\/linux64",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string"
+        },
+        {
+            "name": "自动更新",
+            "description": "",
+            "env_variable": "AUTO_UPDATE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "BepInEx安装包地址",
+            "description": "",
+            "env_variable": "GITHUB_PACKAGE",
+            "default_value": "valheimPlus\/ValheimPlus",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:40"
+        },
+        {
+            "name": "BepInEx最新版本",
+            "description": "禁止删除",
+            "env_variable": "VERSION",
+            "default_value": "latest",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "BepInEx安装包",
+            "description": "禁止删除",
+            "env_variable": "MATCH",
+            "default_value": "UnixServer.zip",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "公共服务器",
+            "description": "0-局域网，1-公开",
+            "env_variable": "PUBLIC",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|string|max:20"
+        },
+        {
+            "name": "筛选",
+            "description": "",
+            "env_variable": "FILTER",
+            "default_value": "\/^\\(Filename:.*Line:[[:space:]]+[[:digit:]]+\\)$\/d; \/^([[:space:]]+)?$\/d",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "string"
+        },
+        {
+            "name": "关机命令",
+            "description": "禁止删除",
+            "env_variable": "STOP",
+            "default_value": "kill -2 $!; wait;",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string"
+        }
+    ]
+}
