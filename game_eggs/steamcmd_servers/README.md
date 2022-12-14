@@ -60,6 +60,9 @@ This is a collection of servers that use SteamCMD to install.
 
 [ECO](eco)
 
+## Frozen Flame
+[Frozen Flame](frozen_flame)
+
 ## HLDS Server
 
 [HLDS Server](hlds_server)
@@ -73,6 +76,10 @@ This is a collection of servers that use SteamCMD to install.
 ## Hurtworld
 
 [Hurtworld](hurtworld)
+
+## Icarus 
+
+* [Icarus](icarus)
 
 ## Insurgency: Sandstorm
 
@@ -164,6 +171,8 @@ This is a collection of servers that use SteamCMD to install.
 ## Space Engineers
 
 [Space Engineers](space_engineers)
+  * [default](space_engineers/default)
+  * [torch](space_engineers/torch)
 
 ## Squad
 
@@ -199,12 +208,17 @@ This is a collection of servers that use SteamCMD to install.
 
 ## The Isle
 
-* [The Isle](the_isle)
+[The Isle](the_isle)
   * [Evrima](the_isle/evrima/)
 
 ## Tower Unite
 
 [Tower Unite](tower_unite)
+
+## Truck Sim
+
+* [Truck Sim](truck-simulator)
+  * [American Truck Simulator](truck-simulator/american-truck-simulator/)
 
 ## Unturned
 
@@ -216,6 +230,6 @@ This is a collection of servers that use SteamCMD to install.
 
 ## Valheim
 
-* [Valheim](valheim)
+[Valheim](valheim)
   * [Valheim Vanilla](valheim/valheim_vanilla)
   * [Valheim Plus Mod](valheim/valheim_plus)

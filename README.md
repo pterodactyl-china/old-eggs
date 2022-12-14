@@ -26,6 +26,8 @@ If you are reading this it looks like you are looking to add an egg to your serv
 
 [Discord](/bots/discord)
 
+**Note:** these are actual Discord bot eggs, NOT language eggs. The old language eggs (discord-js-generic, discord-py-generic, etc) have been moved to the [generic languages section](#generic-languages).
+
 * [ATL Bot](/bots/discord/atlbot) Node JS
 * [Bastion](/bots/discord/bastion) Node JS
 * [CorpBot](/bots/discord/corpbot) Python
@@ -75,6 +77,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 ### noSQL
 
 * [MongoDB](/database/nosql/mongodb)
+* [rethinkdb](/database/nosql/rethinkdb)
 
 ### SQL Databases
 
@@ -149,6 +152,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 * [Bedrock](game_eggs/minecraft/bedrock) Servers for Bedrock Minecraft (Windows 10, mobile, console)
   * [Bedrock](game_eggs/minecraft/bedrock/bedrock)
   * [gomint](game_eggs/minecraft/bedrock/gomint)
+  * [LiteLoaderBDS](game_eggs/bedrock/LiteLoader-bedrock)
   * [Nukkit](game_eggs/minecraft/bedrock/nukkit)
   * [PocketMine MP](game_eggs/minecraft/bedrock/pocketmine_mp)
 
@@ -218,11 +222,13 @@ If you are reading this it looks like you are looking to add an egg to your serv
 * [Don't Starve Together](game_eggs/steamcmd_servers/dont_starve)
 * [ECO](game_eggs/steamcmd_servers/eco)
 * [Fistful of Frags](game_eggs/steamcmd_servers/fof)
+* [Frozen Flame](game_eggs/steamcmd_servers/frozen_flame)
 * [HLDS Server](game_eggs/steamcmd_servers/hlds_server)
   * [HLDS Vanilla](game_eggs/steamcmd_servers/hlds_server/vanilla)
   * [ReHLDS](game_eggs/steamcmd_servers/hlds_server/rehlds)
 * [Holdfast: Nations At War](game_eggs/steamcmd_servers/holdfast)
 * [Hurtworld](game_eggs/steamcmd_servers/hurtworld)
+* [Icarus](game_eggs/steamcmd_servers/icarus)
 * [Insurgency: Sandstorm](game_eggs/steamcmd_servers/insurgency_sandstorm)
 * [Killing Floor 2](game_eggs/steamcmd_servers/killing_floor_2)
 * [Left 4 Dead](game_eggs/steamcmd_servers/left4dead)
@@ -250,6 +256,8 @@ If you are reading this it looks like you are looking to add an egg to your serv
   * [multiadmin](game_eggs/steamcmd_servers/scpsl/multiadmin)
 * [Soldat](game_eggs/steamcmd_servers/soldat)
 * [Space Engineers](game_eggs/steamcmd_servers/space_engineers)
+  * [default](game_eggs/steamcmd_servers/space_engineers/default)
+  * [torch](game_eggs/steamcmd_servers/space_engineers/torch)
 * [Squad](game_eggs/steamcmd_servers/squad)
 * [Starbound](game_eggs/steamcmd_servers/starbound)
 * [Stationeers](game_eggs/steamcmd_servers/stationeers)
@@ -261,6 +269,8 @@ If you are reading this it looks like you are looking to add an egg to your serv
   * [Evrima](game_eggs/steamcmd_servers/the_isle/evrima)
 * [Team Fortress 2 Classic](game_eggs/steamcmd_servers/team_fortress_2_classic)
 * [Tower Unite](game_eggs/steamcmd_servers/tower_unite)
+* [Truck Sim](game_eggs/steamcmd_servers/truck-simulator/)
+  * [American Truck Simulator](game_eggs/steamcmd_servers/truck-simulator/american-truck-simulator/)
 * [Unturned](game_eggs/steamcmd_servers/unturned)
 * [V Rising](game_eggs/steamcmd_servers/v_rising)
 * [Valheim](game_eggs/steamcmd_servers/valheim)
