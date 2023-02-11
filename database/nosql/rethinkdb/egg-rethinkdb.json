@@ -10,7 +10,7 @@
     "description": "The open-source database for the realtime web",
     "features": null,
     "docker_images": {
-        "Debian": "ghcr.io\/parkervcp\/yolks:debian"
+        "Debian": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:debian"
     },
     "file_denylist": [],
     "startup": ".\/rethinkdb --bind 0.0.0.0 --cluster-port {{SERVER_PORT}} --driver-port {{DRIVER_PORT}} --http-port {{HTTP_PORT}} --initial-password auto --no-http-admin",

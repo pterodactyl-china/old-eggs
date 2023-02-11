@@ -14,6 +14,9 @@
 
 * [MCGalaxy](classicube/mcgalaxy)
 
+[Doom](doom)
+* [Zandronum](doom/zandronum)
+
 [ET Legacy](enemy_territory/etlegacy)
 
 [Factorio](factorio)
@@ -120,6 +123,7 @@
 * [DayZ (Experimental)](steamcmd_servers/dayz-experimental)
 * [Don't Starve Together](steamcmd_servers/dont_starve)
 * [ECO](steamcmd_servers/eco)
+* [Empyrion - Galactic Survival](steamcmd_servers/empyrion)
 * [Fistful of Frags](steamcmd_servers/fof)
 * [HLDS Server](steamcmd_servers/hlds_server)
   * [HLDS Vanilla](steamcmd_servers/hlds_server/vanilla)
@@ -169,13 +173,15 @@
 * [The Isle](steamcmd_servers/the_isle)
   * [Evrima](steamcmd_servers/the_isle/evrima)
 * [Tower Unite](steamcmd_servers/tower_unite)
-* [Truck Sim](truck-simulator)
-  * [American Truck Simulator](truck-simulator/american-truck-simulator/)
+* [Truck Sim](steamcmd_servers/truck-simulator)
+  * [American Truck Simulator](steamcmd_servers/truck-simulator/american-truck-simulator/)
+  * [Euro Truck Simulator 2](steamcmd_servers/truck-simulator/euro-truck-simulator2/)
 * [Unturned](steamcmd_servers/unturned)
 * [V Rising](steamcmd_servers/v_rising)
 * [Valheim](steamcmd_servers/valheim)
-  * [Valheim Plus Mod](steamcmd_servers/valheim/valheim_plus)
   * [Valheim Vanilla](steamcmd_servers/valheim/valheim_vanilla)
+  * [Valheim BepInEx](steamcmd_servers/valheim/valheim_bepinex)
+  * [Valheim Plus Mod](steamcmd_servers/valheim/valheim_plus)
 
 [Teeworlds](teeworlds)
 
