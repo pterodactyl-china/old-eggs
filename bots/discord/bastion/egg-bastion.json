@@ -10,7 +10,7 @@
     "description": "Bastion is a multi-purpose Discord Bot that can help you automate most tasks in your server, from administration and moderation to keeping the members active through various incentives, games and other fun activities",
     "features": null,
     "docker_images": {
-        "Bastion": "ghcr.io\/parkervcp\/yolks:bot_bastion"
+        "Bastion": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:bot_bastion"
     },
     "file_denylist": [],
     "startup": "{{STARTUP_CMD}}",
