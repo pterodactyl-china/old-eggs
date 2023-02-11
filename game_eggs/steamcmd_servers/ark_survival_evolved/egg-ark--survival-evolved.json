@@ -15,7 +15,7 @@
         "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/games:source": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/games:source"
     },
     "file_denylist": [],
-    "startup": "rmv() { echo -e \"stopping server\"; rcon -t rcon -a 127.0.0.1:${RCON_PORT} -p ${ARK_ADMIN_PASSWORD} -c saveworld && rcon -a 127.0.0.1:${RCON_PORT} -p ${ARK_ADMIN_PASSWORD} -c DoExit; }; trap rmv 15; cd ShooterGame\/Binaries\/Linux && .\/ShooterGameServer {{SERVER_MAP}}?listen?SessionName=\"{{SESSION_NAME}}\"?ServerPassword={{ARK_PASSWORD}}?ServerAdminPassword={{ARK_ADMIN_PASSWORD}}?Port={{SERVER_PORT}}?RCONPort={{RCON_PORT}}?QueryPort={{QUERY_PORT}}?RCONEnabled=True$( [ \"$BATTLE_EYE\" == \"1\" ] || printf %s ' -NoBattlEye' ) -server {{ARGS}} -log & until echo \"waiting for rcon connection...\"; rcon -t rcon -a 127.0.0.1:${RCON_PORT} -p ${ARK_ADMIN_PASSWORD}; do sleep 5; done",
+    "startup": "rmv() { echo -e \"stopping server\"; rcon -t rcon -a 127.0.0.1:${RCON_PORT} -p ${ARK_ADMIN_PASSWORD} -c saveworld && rcon -a 127.0.0.1:${RCON_PORT} -p ${ARK_ADMIN_PASSWORD} -c DoExit; }; trap rmv 15; cd ShooterGame\/Binaries\/Linux && .\/ShooterGameServer {{SERVER_MAP}}?listen?SessionName=\"{{SESSION_NAME}}\"?ServerPassword={{ARK_PASSWORD}}?ServerAdminPassword={{ARK_ADMIN_PASSWORD}}?Port={{SERVER_PORT}}?RCONPort={{RCON_PORT}}?QueryPort={{QUERY_PORT}}?RCONEnabled=True?GameModIds={{MOD_ID}}$( [ \"$BATTLE_EYE\" == \"1\" ] || printf %s ' -NoBattlEye' ) -server -automanagedmods {{ARGS}} -log & until echo \"waiting for rcon connection...\"; rcon -t rcon -a 127.0.0.1:${RCON_PORT} -p ${ARK_ADMIN_PASSWORD}; do sleep 5; done",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"Waiting commands for 127.0.0.1:\"\r\n}",
@@ -113,6 +113,15 @@
         {
             "name": "\u6e38\u620fID",
             "description": "\u65b9\u821f Steam \u5e94\u7528\u7a0b\u5e8f ID \u7528\u4e8e\u81ea\u52a8\u66f4\u65b0\u3002",
+            "env_variable": "MOD_ID",
+            "default_value": "",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "nullable|string"
+        },
+        {
+            "name": "App ID",
+            "description": "ARK steam app id for auto updates. Leave blank to avoid auto update.",
             "env_variable": "SRCDS_APPID",
             "default_value": "376030",
             "user_viewable": false,
