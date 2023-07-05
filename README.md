@@ -144,7 +144,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 
 [Mindustry](game_eggs/mindustry)
 
-* [Mindustry](game_eggs/mindustry/mindustry)
+* [Mindustry](game_eggs/mindustry)
 
 [Minetest](game_eggs/minetest) (including MTG)
 
