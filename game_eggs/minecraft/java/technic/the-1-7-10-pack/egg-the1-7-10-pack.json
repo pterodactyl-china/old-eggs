@@ -7,7 +7,7 @@
     "name": "The 1.7.10 Pack",
     "author": "contact@sweplox.se",
     "description": "The 1.7.10 Pack",
-    "image": "quay.io\/pterodactyl\/core:java",
+    "image": "quay.dockerproxy.com\/pterodactyl\/core:java",
     "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar forge-*.jar",
     "config": {
         "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"server-port\": \"{{server.build.default.port}}\",\r\n            \"query.port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",

@@ -10,7 +10,7 @@
     "description": "Egg for hosting dedicated Yuzu multiplayer rooms.",
     "features": null,
     "docker_images": {
-        "ghcr.io\/parkervcp\/yolks:debian": "ghcr.io\/parkervcp\/yolks:debian"
+        "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:debian": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:debian"
     },
     "file_denylist": [],
     "startup": ".\/yuzu-room --room-name \"{{ROOM_NAME}}\"  --room-description \"{{ROOM_DESCRIPTION}}\"  --preferred-game \"{{PREFERRED_GAME}}\"  --preferred-game-id {{PREFERRED_GAME_ID}}  --port {{SERVER_PORT}}  --max_members {{MAX_MEMBERS}} --password \"{{PASSWORD}}\" --token \"{{YUZU_TOKEN}}\" --web-api-url \"https:\/\/api.yuzu-emu.org\/\"",
@@ -22,8 +22,8 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n\r\n# Install build tools\r\necho \"deb http:\/\/deb.debian.org\/debian bullseye-backports main\" >> \/etc\/apt\/sources.list && \\\r\napt-get update && apt-get -y full-upgrade && \\\r\n    apt-get install -y build-essential wget git ccache ninja-build libssl-dev pkg-config libarchive-tools \\\r\n    cmake\/bullseye-backports cmake-data\/bullseye-backports\r\n\r\n\r\n# Shallow clone yuzu repository, since we delete the local copy afterwards\r\ngit clone --depth 1 -j4 --recursive --shallow-submodules https:\/\/github.com\/yuzu-emu\/yuzu-mainline.git \/mnt\/server\/yuzu-mainline\r\n\r\n# Download build tools and build\r\ngit clone --depth 1 https:\/\/github.com\/yuzu-emu\/yuzu-multiplayer-dedicated.git \/mnt\/server\/build-files\r\ncd \/mnt\/server\/yuzu-mainline && \/mnt\/server\/build-files\/.ci\/build.sh\r\n\r\n# Copy server binary to container root\r\ncp \/mnt\/server\/yuzu-mainline\/build\/bin\/yuzu-room \/mnt\/server\/yuzu-room\r\n\r\n# Delete git repo's to save disk space.\r\nrm -rf \/mnt\/server\/yuzu-mainline && rm -rf \/mnt\/server\/build-files",
-            "container": "ghcr.io\/pterodactyl\/installers:debian",
+            "script": "#!\/bin\/bash\r\n\r\n# Install build tools\r\necho \"deb http:\/\/deb.debian.org\/debian bullseye-backports main\" >> \/etc\/apt\/sources.list && \\\r\napt-get update && apt-get -y full-upgrade && \\\r\n    apt-get install -y build-essential wget git ccache ninja-build libssl-dev pkg-config libarchive-tools \\\r\n    cmake\/bullseye-backports cmake-data\/bullseye-backports\r\n\r\n\r\n# Shallow clone yuzu repository, since we delete the local copy afterwards\r\ngit clone --depth 1 -j4 --recursive --shallow-submodules https:\/\/ghproxy.com\/https:\/\/github.com\/yuzu-emu\/yuzu-mainline.git \/mnt\/server\/yuzu-mainline\r\n\r\n# Download build tools and build\r\ngit clone --depth 1 https:\/\/ghproxy.com\/https:\/\/github.com\/yuzu-emu\/yuzu-multiplayer-dedicated.git \/mnt\/server\/build-files\r\ncd \/mnt\/server\/yuzu-mainline && \/mnt\/server\/build-files\/.ci\/build.sh\r\n\r\n# Copy server binary to container root\r\ncp \/mnt\/server\/yuzu-mainline\/build\/bin\/yuzu-room \/mnt\/server\/yuzu-room\r\n\r\n# Delete git repo's to save disk space.\r\nrm -rf \/mnt\/server\/yuzu-mainline && rm -rf \/mnt\/server\/build-files",
+            "container": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-china\/installers:debian",
             "entrypoint": "bash"
         }
     },

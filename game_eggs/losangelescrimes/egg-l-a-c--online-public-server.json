@@ -10,7 +10,7 @@
     "description": "To make the Los Angeles Crimes public server. Los Angeles Crimes lets you play, create, and discover a variety of immersive worlds created by a global community!",
     "features": null,
     "images": [
-        "quay.io\/parkervcp\/pterodactyl-images:ubuntu_source"
+        "quay.dockerproxy.com\/parkervcp\/pterodactyl-images:ubuntu_source"
     ],
     "file_denylist": [],
     "startup": ".\/LAC_Linux_v{{VER}}.x86_64",

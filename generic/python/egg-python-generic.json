@@ -7,15 +7,15 @@
     "exported_at": "2023-06-22T14:18:47+02:00",
     "name": "python generic",
     "author": "parker@parkervcp.com",
-    "description": "A Generic Python Egg for Pterodactyl\r\n\r\nTested with: https:\/\/github.com\/Ispira\/pixel-bot",
+    "description": "A Generic Python Egg for Pterodactyl\r\n\r\nTested with: https:\/\/ghproxy.com\/https:\/\/github.com\/Ispira\/pixel-bot",
     "features": null,
     "docker_images": {
-        "Python 3.11": "ghcr.io\/parkervcp\/yolks:python_3.11",
-        "Python 3.10": "ghcr.io\/parkervcp\/yolks:python_3.10",
-        "Python 3.9": "ghcr.io\/parkervcp\/yolks:python_3.9",
-        "Python 3.8": "ghcr.io\/parkervcp\/yolks:python_3.8",
-        "Python 3.7": "ghcr.io\/parkervcp\/yolks:python_3.7",
-        "Python 2.7": "ghcr.io\/parkervcp\/yolks:python_2.7"
+        "Python 3.11": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:python_3.11",
+        "Python 3.10": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:python_3.10",
+        "Python 3.9": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:python_3.9",
+        "Python 3.8": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:python_3.8",
+        "Python 3.7": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:python_3.7",
+        "Python 2.7": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:python_2.7"
     },
     "file_denylist": [],
     "startup": "if [[ -d .git ]] && [[ \"{{AUTO_UPDATE}}\" == \"1\" ]]; then git pull; fi; if [[ ! -z \"{{PY_PACKAGES}}\" ]]; then pip install -U --prefix .local {{PY_PACKAGES}}; fi; if [[ -f \/home\/container\/${REQUIREMENTS_FILE} ]]; then pip install -U --prefix .local -r ${REQUIREMENTS_FILE}; fi; \/usr\/local\/bin\/python \/home\/container\/{{PY_FILE}}",
@@ -35,7 +35,7 @@
     "variables": [
         {
             "name": "Git Repo Address",
-            "description": "Git repo to clone\r\n\r\nI.E. https:\/\/github.com\/parkervcp\/repo_name",
+            "description": "Git repo to clone\r\n\r\nI.E. https:\/\/ghproxy.com\/https:\/\/github.com\/parkervcp\/repo_name",
             "env_variable": "GIT_ADDRESS",
             "default_value": "",
             "user_viewable": true,
@@ -105,7 +105,7 @@
         },
         {
             "name": "Git Access Token",
-            "description": "Password to use with git.\r\n\r\nIt's best practice to use a Personal Access Token.\r\nhttps:\/\/github.com\/settings\/tokens\r\nhttps:\/\/gitlab.com\/-\/profile\/personal_access_tokens",
+            "description": "Password to use with git.\r\n\r\nIt's best practice to use a Personal Access Token.\r\nhttps:\/\/ghproxy.com\/https:\/\/github.com\/settings\/tokens\r\nhttps:\/\/gitlab.com\/-\/profile\/personal_access_tokens",
             "env_variable": "ACCESS_TOKEN",
             "default_value": "",
             "user_viewable": true,

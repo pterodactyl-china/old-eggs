@@ -10,7 +10,7 @@
     "description": "AssaultCube is a FREE, multiplayer, first-person shooter game, based on the CUBE engine.\r\n\r\nTaking place in realistic environments, with fast, arcade gameplay, it's addictive and fun!",
     "features": null,
     "docker_images": {
-        "Debian": "ghcr.io\/parkervcp\/yolks:debian"
+        "Debian": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:debian"
     },
     "file_denylist": [],
     "startup": ".\/bin_unix\/linux_64_server -Y{{ASSAULT_SERVER_KEY}} -n\"{{ASSAULT_SERVER_DESCRIPTION}}\" -o\"{{ASSAULT_SERVER_MOTD}}\" -c{{ASSAULT_SERVER_MAXPLAYERS}} -x{{ASSAULT_SERVER_ADMINPASSWORD}} -f{{SERVER_PORT}} -p{{ASSAULT_SERVER_PLAYERPASSWORD}} -m{{ASSAULT_SERVER_MASTERSERVER}}",

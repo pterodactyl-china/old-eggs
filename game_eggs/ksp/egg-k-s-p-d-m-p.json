@@ -10,7 +10,7 @@
     "description": "Dark Multiplayer mod server for Kerbal Space Program",
     "features": null,
     "docker_images": {
-        "Mono": "ghcr.io\/parkervcp\/yolks:mono_latest"
+        "Mono": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:mono_latest"
     },
     "file_denylist": [],
     "startup": "mono DMPServer.exe",
@@ -23,7 +23,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\n\r\n\r\nmkdir -p \/mnt\/server\r\ncd \/mnt\/server\r\n\r\nV=$(curl -s https:\/\/d-mp.org\/downloads | grep \"DMP Server\" | awk -F 'href=\"' 'NR==2 {print $2}' | awk -F '\"' '{print $1}') # \/builds\/release\/v0.3.8.3\/DMPServer.zip\r\n\r\necho \"Download link: https:\/\/d-mp.org${V}\"\r\ncurl -sSL -o DMPServer.zip https:\/\/d-mp.org${V}\r\n\r\nunzip -o DMPServer.zip\r\nmv DMPServer\/* .\/\r\n\r\nrm -rf DMPServer\r\nrm DMPServer.zip\r\n\r\n## install end\r\necho \"-----------------------------------------\"\r\necho \"Installation completed...\"\r\necho \"-----------------------------------------\"",
-            "container": "ghcr.io\/parkervcp\/installers:debian",
+            "container": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/installers:debian",
             "entrypoint": "bash"
         }
     },

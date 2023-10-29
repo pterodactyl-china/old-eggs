@@ -10,7 +10,7 @@
     "description": "sogeBot - Free Twitch Bot built on Node.js https:\/\/sogebot.xyz\/",
     "features": null,
     "docker_images": {
-        "ghcr.io\/parkervcp\/yolks:nodejs_18": "ghcr.io\/parkervcp\/yolks:nodejs_18"
+        "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:nodejs_18": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:nodejs_18"
     },
     "file_denylist": [],
     "startup": "npm start",

@@ -10,9 +10,9 @@
     "description": "A generic dart CLI egg.\r\n\r\nThis will clone a dart CLI application. it defaults to master if no branch is specified.\r\n\r\nInstalls the pubspec.yaml packages on run. If you set user_upload then I assume you know what you are doing.",
     "features": null,
     "docker_images": {
-        "Dart_2.19": "ghcr.io\/parkervcp\/yolks:dart_2.19",
-        "Dart_2.18": "ghcr.io\/parkervcp\/yolks:dart_2.18",
-        "Dart_2.17": "ghcr.io\/parkervcp\/yolks:dart_2.17"
+        "Dart_2.19": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dart_2.19",
+        "Dart_2.18": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dart_2.18",
+        "Dart_2.17": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dart_2.17"
     },
     "file_denylist": [],
     "startup": "if [[ -d .git ]] && [[ {{AUTO_UPDATE}} == \"1\" ]]; then git pull; fi; dart pub get; dart run",
@@ -32,7 +32,7 @@
     "variables": [
         {
             "name": "Git Repo Address",
-            "description": "GitHub Repo to clone\r\n\r\nI.E. https:\/\/github.com\/kNoAPP\/repo_name",
+            "description": "GitHub Repo to clone\r\n\r\nI.E. https:\/\/ghproxy.com\/https:\/\/github.com\/kNoAPP\/repo_name",
             "env_variable": "GIT_ADDRESS",
             "default_value": "",
             "user_viewable": true,
@@ -82,7 +82,7 @@
         },
         {
             "name": "Git Access Token",
-            "description": "Password to use with git.\r\n\r\nIt's best practice to use a Personal Access Token.\r\nhttps:\/\/github.com\/settings\/tokens\r\nhttps:\/\/gitlab.com\/-\/profile\/personal_access_tokens",
+            "description": "Password to use with git.\r\n\r\nIt's best practice to use a Personal Access Token.\r\nhttps:\/\/ghproxy.com\/https:\/\/github.com\/settings\/tokens\r\nhttps:\/\/gitlab.com\/-\/profile\/personal_access_tokens",
             "env_variable": "ACCESS_TOKEN",
             "default_value": "",
             "user_viewable": true,

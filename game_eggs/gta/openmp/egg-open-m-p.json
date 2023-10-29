@@ -10,7 +10,7 @@
     "description": "A multiplayer mod for Grand Theft Auto: San Andreas that is fully backwards compatible with San Andreas Multiplayer.",
     "features": null,
     "docker_images": {
-        "Samp": "ghcr.io\/parkervcp\/games:samp"
+        "Samp": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/games:samp"
     },
     "file_denylist": [],
     "startup": ".\/omp-server",
@@ -23,7 +23,7 @@
     "scripts": {
         "installation": {
             "script": "#!\/bin\/bash\r\n\r\napt -y install curl git jq tar\r\n\r\n## get release info and download links\r\nLATEST_JSON=$(curl --silent \"https:\/\/api.github.com\/repos\/openmultiplayer\/open.mp\/releases\/latest\")\r\nRELEASES=$(curl --silent \"https:\/\/api.github.com\/repos\/openmultiplayer\/open.mp\/releases\")\r\nMATCH=open.mp-linux-x86-dynssl\r\n\r\nif [ -z \"${VERSION}\" ] || [ \"${VERSION}\" == \"latest\" ]; then\r\n    DOWNLOAD_URL=$(echo ${LATEST_JSON} | jq .assets | jq -r .[].browser_download_url | grep -i ${MATCH})\r\nelse\r\n    VERSION_CHECK=$(echo ${RELEASES} | jq -r --arg VERSION \"${VERSION}\" '.[] | select(.tag_name==$VERSION) | .tag_name')\r\n    if [ \"${VERSION}\" == \"${VERSION_CHECK}\" ]; then\r\n        DOWNLOAD_URL=$(echo ${RELEASES} | jq -r --arg VERSION \"${VERSION}\" '.[] | select(.tag_name==$VERSION) | .assets[].browser_download_url' | grep -i ${MATCH})\r\n    else\r\n        echo -e \"defaulting to latest release\"\r\n        DOWNLOAD_URL=$(echo ${LATEST_JSON} | jq .assets | jq -r .[].browser_download_url | grep -linux-x86 | head -1)\r\n    fi\r\nfi\r\n\r\necho \"running: curl -sSL -o openmp.tar.gz ${DOWNLOAD_URL}\"\r\ncurl -sSL -o openmp.tar.gz ${DOWNLOAD_URL}\r\n\r\nmkdir -p \/mnt\/server\r\ntar -xzvf openmp.tar.gz --strip-components=1 -C \/mnt\/server\/\r\n\r\ncd \/mnt\/server || exit\r\n\r\necho \"creating default config\"\r\n\r\nif [ -e config.json ]; then\r\n    echo \"server config file exists\"\r\nelse\r\n    echo \"Downloading default OpenMp config\"\r\n    curl https:\/\/raw.githubusercontent.com\/parkervcp\/eggs\/master\/game_eggs\/gta\/openmp\/config.json >> config.json\r\nfi\r\n\r\n\r\necho \"-----------------------------------------\"\r\necho \"Installation completed...\"\r\necho \"-----------------------------------------\"",
-            "container": "ghcr.io\/parkervcp\/installers:debian",
+            "container": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/installers:debian",
             "entrypoint": "bash"
         }
     },

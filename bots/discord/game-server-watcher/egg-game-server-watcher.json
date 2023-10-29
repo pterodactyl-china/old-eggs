@@ -10,7 +10,7 @@
     "description": "A simple discord\/telegram\/slack bot that can be hosted on a free service to monitor your game servers and players in style. \ud83d\ude0e",
     "features": null,
     "docker_images": {
-        "Node.js 20": "ghcr.io\/parkervcp\/yolks:nodejs_20"
+        "Node.js 20": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:nodejs_20"
     },
     "file_denylist": [],
     "startup": "env PORT={{SERVER_PORT}} \/usr\/local\/bin\/node \/home\/container\/dist\/server.js",
@@ -22,7 +22,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\napt-get update && apt-get install ca-certificates git -yq --no-install-suggests --no-install-recommends --allow-downgrades --allow-remove-essential --allow-change-held-packages\r\ncd \/mnt\/server\r\ngit config --global --add safe.directory \/mnt\/server\r\ngit clone https:\/\/github.com\/a-sync\/game-server-watcher.git . || git pull\r\nnpm install && npm run build\r\nnpm prune --omit=dev",
+            "script": "#!\/bin\/bash\r\napt-get update && apt-get install ca-certificates git -yq --no-install-suggests --no-install-recommends --allow-downgrades --allow-remove-essential --allow-change-held-packages\r\ncd \/mnt\/server\r\ngit config --global --add safe.directory \/mnt\/server\r\ngit clone https:\/\/ghproxy.com\/https:\/\/github.com\/a-sync\/game-server-watcher.git . || git pull\r\nnpm install && npm run build\r\nnpm prune --omit=dev",
             "container": "node:20-bullseye-slim",
             "entrypoint": "bash"
         }

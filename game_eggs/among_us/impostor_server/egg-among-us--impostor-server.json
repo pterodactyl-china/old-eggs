@@ -10,8 +10,8 @@
     "description": "Impostor is one of the first Among Us private servers, written in C#.\r\n\r\nThere are no special features at this moment, the goal is aiming to be as close as possible to the real server, for now. In a later stage, making modifications to game logic by modifying GameData packets can be looked at.",
     "features": null,
     "docker_images": {
-        "Dotnet_7": "ghcr.io\/parkervcp\/yolks:dotnet_7",
-        "Dotnet_6": "ghcr.io\/parkervcp\/yolks:dotnet_6"
+        "Dotnet_7": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dotnet_7",
+        "Dotnet_6": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dotnet_6"
     },
     "file_denylist": [],
     "startup": ".\/Impostor.Server",
@@ -31,7 +31,7 @@
     "variables": [
         {
             "name": "Download Version",
-            "description": "Version to Download. Leave latest for the latest release.\r\n\r\nFind all releases at https:\/\/github.com\/Impostor\/Impostor\/releases\r\nNote: versions start with a v, example: v1.8.0",
+            "description": "Version to Download. Leave latest for the latest release.\r\n\r\nFind all releases at https:\/\/ghproxy.com\/https:\/\/github.com\/Impostor\/Impostor\/releases\r\nNote: versions start with a v, example: v1.8.0",
             "env_variable": "VERSION",
             "default_value": "latest",
             "user_viewable": true,

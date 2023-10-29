@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "images": [
-        "quay.io\/pterodactyl\/core:source"
+        "quay.dockerproxy.com\/pterodactyl\/core:source"
     ],
     "file_denylist": [],
     "startup": ".\/srcds_run -game {{SRCDS_GAME}} -console -port {{SERVER_PORT}} +map {{SRCDS_MAP}} +ip 0.0.0.0 -strictportbind -norestart",

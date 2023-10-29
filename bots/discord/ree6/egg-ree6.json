@@ -10,7 +10,7 @@
     "description": "All-in-one, open source and 100% free Discord Bot!",
     "features": null,
     "docker_images": {
-        "Java_17": "ghcr.io\/pterodactyl\/yolks:java_17"
+        "Java_17": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-china\/yolks:java_17"
     },
     "file_denylist": [],
     "startup": "java -Dnogui=true -jar Ree6.jar",

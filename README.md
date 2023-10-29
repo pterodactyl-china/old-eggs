@@ -1,4 +1,6 @@
-# Parkers Pterodactyl eggs repo
+# 此预设维护太过消耗人力，并且没有人赞助，所以此仓库不再积极维护（至少不太可能去汉化了）。
+
+## Parkers 的翼龙预设仓库
 
 I am working on adding a large collection of public eggs for the Pterodactyl community.
 
@@ -6,27 +8,27 @@ With that I am also accepting PR's for new services and also updates to the curr
 
 If you are submitting PR's try and keep names and titles the same.
 
-## How to import an egg
+## 如何导入预设
 
-If you are reading this it looks like you are looking to add an egg to your server.
+如果您正在阅读本文，那么您似乎正在向服务器添加一个预设。
 
-1. Download any of the json files located in the folders below.
-   1. It's easiest to right click the `raw` button and save as.
-2. In your panel go to the `Nests` section in the admin part of the panel
-3. Click the green `Import Egg` button
-4. Browse to the json file you saved earlier
-5. Select what nest you want to put the egg in.
-   1. If you want a new nest you need to create it before importing the egg.
+1. 下载位于以下文件夹中的任意 json 文件。
+   1. 最简单的方法是右键单击 `raw` 按钮并另存为。
+2. 在您的面板中，转到面板管理部分的 `预设组` 部分
+3. 单击绿色的 `导入预设组` 按钮
+4. 浏览到您之前保存的 json 文件
+5. 选择您想要将预设放入的预设组。
+   1. 如果您想要一个新预设组，您需要在导入预设之前创建它。
 
-## You must restart your daemon after importing an egg if you are using 0.7. This is not required on 1.X
+## 如果您使用的是 0.7，则必须在导入 Egg 后重新启动守护程序。 1.X 上不需要这样做
 
-## Please read the CONTRIBUTING.md before submitting PRs
+## 请在提交 PR 之前阅读 CONTRIBUTING.md
 
-## [Bots](/bots)
+## [机器人](/bots)
 
 [Discord](/bots/discord)
 
-**Note:** these are actual Discord bot eggs, NOT language eggs. The old language eggs (discord-js-generic, discord-py-generic, etc) have been moved to the [generic languages section](#generic-languages).
+**注:** 这些是真正的 Discord 机器人预设，而不是语言预设。 旧的语言预设（discord-js-generic、discord-py-generic 等）已移至 [通用语言部分](#通用语言).
 
 * [ATL Bot](/bots/discord/atlbot) Node JS
 * [Bastion](/bots/discord/bastion) Node JS
@@ -55,7 +57,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 
 * [JTS3ServerMod](/bots/teamspeak3/jts3servermod)
 
-## [Generic Languages](/generic)
+## [通用语言](/generic)
 
 * [C#](/generic/c%23/)
 * [elixir](/generic/elixir/)
@@ -70,7 +72,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 * [python](/generic/python/)
 * [rust](/generic/rust/)
 
-## [Database](/database)
+## [数据库](/database)
 
 ### In-Memory Databases
 
@@ -97,7 +99,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 * [TeaSpeak](/voice_servers/teaspeak)
 * [TS3-Manager](/voice_servers/ts3_manager)
 
-## [Game Eggs](/game_eggs)
+## [游戏预设](/game_eggs)
 
 [Among Us](game_eggs/among_us)
 
@@ -162,7 +164,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 
 [Mindustry](game_eggs/mindustry)
 
-* [Mindustry](game_eggs/mindustry/mindustry)
+* [Mindustry](game_eggs/mindustry)
 
 [Minetest](game_eggs/minetest) (including MTG)
 
@@ -376,7 +378,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
 
 * [SFTP Storage Share](/storage/sftp_storage_share)
 
-## [Software](/software/)
+## [软件](/software/)
 
 ### Code Server
 

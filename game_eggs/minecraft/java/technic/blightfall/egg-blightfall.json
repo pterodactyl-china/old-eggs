@@ -7,7 +7,7 @@
     "name": "Blightfall",
     "author": "aevum@decess.us",
     "description": "Blightfall is a combination modpack and adventure map about surviving on an alien planet. It uses magic mods and tech mods to create a novel gameplay experience. Can you survive on a world completely covered by Thaumcraft taint?\r\n\r\nhttps:\/\/www.technicpack.net\/modpack\/blightfall.592618",
-    "image": "quay.io\/pterodactyl\/core:java",
+    "image": "quay.dockerproxy.com\/pterodactyl\/core:java",
     "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar Blightfall.jar",
     "config": {
         "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"server-port\": \"{{server.build.default.port}}\",\r\n            \"query.port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",

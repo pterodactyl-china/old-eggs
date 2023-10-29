@@ -10,7 +10,7 @@
     "description": "Vintage Story is an uncompromising wilderness survival sandbox game inspired by lovecraftian horror themes. Find yourself in a ruined world reclaimed by nature and permeated by unnerving temporal disturbances. Relive the advent of human civilization, or take your own path.",
     "features": null,
     "docker_images": {
-        "Dotnet 7": "ghcr.io\/parkervcp\/yolks:dotnet_7"
+        "Dotnet 7": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dotnet_7"
     },
     "file_denylist": [],
     "startup": ".\/VintagestoryServer --dataPath .\/data --port={{SERVER_PORT}} --maxclients={{MAX_CLIENTS}} {{OPTIONS}}",

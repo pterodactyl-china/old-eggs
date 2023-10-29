@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "docker_images": {
-        "ghcr.io\/parkervcp\/games:source": "ghcr.io\/parkervcp\/games:source"
+        "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/games:source": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/games:source"
     },
     "file_denylist": [],
     "startup": "cd bin64 && coproc caves ( .\/dontstarve_dedicated_server_nullrenderer_x64 -bind_ip 0.0.0.0 -port 11000 -persistent_storage_root \/home\/container\/DoNotStarveTogether -conf_dir config -cluster server -players {{MAX_PLAYERS}} -shard Caves ); .\/dontstarve_dedicated_server_nullrenderer_x64 -bind_ip 0.0.0.0 -port {{SERVER_PORT}} -persistent_storage_root \/home\/container\/DoNotStarveTogether -conf_dir config -cluster server -players {{MAX_PLAYERS}} -shard Master && echo 'c_shutdown()' >&\"${caves[1]}\"",

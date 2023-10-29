@@ -10,8 +10,8 @@
     "description": "The Open World mod allows you to create and join servers to play with people all around the world, it introduces plenty of new features including trading, gifting, bartering, PvP and so much more!\r\n\r\nhttps:\/\/github.com\/D12-Dev\/OpenWorld",
     "features": null,
     "docker_images": {
-        "Dotnet 3.1": "ghcr.io\/parkervcp\/yolks:dotnet_3.1",
-        "Dotnet 6": "ghcr.io\/parkervcp\/yolks:dotnet_6"
+        "Dotnet 3.1": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dotnet_3.1",
+        "Dotnet 6": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:dotnet_6"
     },
     "file_denylist": [],
     "startup": ".\/OpenWorldServer",

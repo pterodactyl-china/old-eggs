@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "images": [
-        "quay.io\/parkervcp\/pterodactyl-images:game_mordhau"
+        "quay.dockerproxy.com\/parkervcp\/pterodactyl-images:game_mordhau"
     ],
     "file_denylist": [],
     "startup": ".\/Mordhau\/Binaries\/Linux\/MordhauServer-Linux-Shipping \/Game\/Mordhau\/Maps\/{{DEFAULT_MAP}} -MaxSlots={{MAX_PLAYERS}} -USEALLAVAILABLECORES -Port={{SERVER_PORT}} -queryport={{QUERY_PORT}} -beaconport={{BEACON_PORT}}",

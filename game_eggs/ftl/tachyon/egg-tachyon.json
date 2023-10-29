@@ -10,7 +10,7 @@
     "description": "A multiplayer version of FTL.",
     "features": null,
     "docker_images": {
-        "Java_11": "ghcr.io\/pterodactyl\/yolks:java_11"
+        "Java_11": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-china\/yolks:java_11"
     },
     "file_denylist": [],
     "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar TachyonsCEServer.jar",

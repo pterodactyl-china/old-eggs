@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "images": [
-        "quay.io\/parkervcp\/pterodactyl-images:debian_source"
+        "quay.dockerproxy.com\/parkervcp\/pterodactyl-images:debian_source"
     ],
     "file_denylist": [],
     "startup": "\/home\/container\/Binaries\/Win64\/KFGameSteamServer.bin.x86_64 {{MAP_NAME}}?Port={{SERVER_PORT}}?QueryPort={{QUERY_PORT}}?AdminPassword={{ADMIN_PASS}}?Difficulty={{DIFFICULTY}}$( [ \"$WEB_ADMIN\" == \"true\" ] || printf %s '??WebAdminPort={{WEB_ADMIN_PORT}}' )",

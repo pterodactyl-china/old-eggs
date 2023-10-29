@@ -10,8 +10,8 @@
     "description": "Bun is an incredibly fast JavaScript runtime, transpiler bundler, and npm package manager all-in-one.",
     "features": null,
     "docker_images": {
-        "Bun Latest": "ghcr.io\/parkervcp\/yolks:bun_latest",
-        "Bun Canary": "ghcr.io\/parkervcp\/yolks:bun_canary"
+        "Bun Latest": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:bun_latest",
+        "Bun Canary": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:bun_canary"
     },
     "file_denylist": [],
     "startup": "if [[ -d .git ]] && [[ {{AUTO_UPDATE}} == \"1\" ]]; then git pull; fi; if [[ ! -z ${BUN_PACKAGES} ]]; then bun install ${BUN_PACKAGES}; fi; if [[ ! -z ${RMBUN_PACKAGES} ]]; then bun remove ${RMBUN_PACKAGES}; fi; if [ -f \/home\/container\/package.json ]; then bun install; fi; bun run {{MAIN_FILE}}",

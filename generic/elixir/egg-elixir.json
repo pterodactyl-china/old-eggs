@@ -10,11 +10,11 @@
     "description": "Elixir is a functional, concurrent, high-level general-purpose programming language that runs on the BEAM virtual machine, which is also used to implement the Erlang programming language.",
     "features": null,
     "docker_images": {
-        "Elixir Latest": "ghcr.io\/parkervcp\/yolks:elixir_latest",
-        "Elixir 1.15": "ghcr.io\/parkervcp\/yolks:elixir_1.15",
-        "Elixir 1.14": "ghcr.io\/parkervcp\/yolks:elixir_1.14",
-        "Elixir 1.13": "ghcr.io\/parkervcp\/yolks:elixir_1.13",
-        "Elixir 1.12": "ghcr.io\/parkervcp\/yolks:elixir_1.12"
+        "Elixir Latest": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:elixir_latest",
+        "Elixir 1.15": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:elixir_1.15",
+        "Elixir 1.14": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:elixir_1.14",
+        "Elixir 1.13": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:elixir_1.13",
+        "Elixir 1.12": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:elixir_1.12"
     },
     "file_denylist": [],
     "startup": "if [[ -d .git ]] && [[ 0 == \"1\" ]]; then git pull; fi; mix deps.get; mix run --no-halt",

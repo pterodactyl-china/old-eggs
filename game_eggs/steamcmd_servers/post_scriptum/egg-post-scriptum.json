@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "images": [
-        "quay.io\/pterodactyl\/core:source"
+        "quay.dockerproxy.com\/pterodactyl\/core:source"
     ],
     "startup": ".\/PostScriptumServer.sh Port={{SERVER_PORT}} QueryPort={{QUERY_PORT}} -RCONPORT={{RCON_PORT}} -RCONPASSWORD={{RCON_PASSWORD}} -fullcrashdump -log",
     "config": {

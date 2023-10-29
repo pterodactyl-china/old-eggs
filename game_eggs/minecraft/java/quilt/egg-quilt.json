@@ -10,10 +10,10 @@
     "description": "The Quilt project is an open-source, community-driven modding toolchain designed primarily for Minecraft. By focusing on speed, ease of use and modularity, Quilt aims to provide a sleek and modern modding toolchain with an open ecosystem.",
     "features": null,
     "docker_images": {
-        "Java 8: 1.14 - 1.16.5": "ghcr.io\/pterodactyl\/yolks:java_8",
-        "Java 16: 1.17 - 1.17.1": "ghcr.io\/pterodactyl\/yolks:java_16",
-        "Java 17: 1.18 - Newest": "ghcr.io\/pterodactyl\/yolks:java_17",
-        "Java 18: Newest": "ghcr.io\/pterodactyl\/yolks:java_18"
+        "Java 8: 1.14 - 1.16.5": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-china\/yolks:java_8",
+        "Java 16: 1.17 - 1.17.1": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-china\/yolks:java_16",
+        "Java 17: 1.18 - Newest": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-china\/yolks:java_17",
+        "Java 18: Newest": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-china\/yolks:java_18"
     },
     "file_denylist": [],
     "startup": "java -jar {{SERVER_JARFILE}} nogui -Xms128M -XX:MaxRAMPercentage=95.0",
