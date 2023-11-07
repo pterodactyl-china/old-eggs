@@ -1,0 +1,32 @@
+name: 文本替换
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find and Replace 1
+        uses: thiagodnf/string-replacer@v1.0.2
+        with:
+          find: "ghcr.io\\/parkervcp"
+          replace: "registry.cn-shanghai.aliyuncs.com\\/pterodactyl-images"
+          include: |
+            **/*.json
+
+      - name: Find and Replace 2
+        uses: thiagodnf/string-replacer@v1.0.2
+        with:
+          find: "ghcr.io\\/pterodactyl"
+          replace: "registry.cn-shanghai.aliyuncs.com\\/pterodactyl-china"
+          include: |
+            **/*.json
+
+      - name: Find and Replace 3
+        uses: thiagodnf/string-replacer@v1.0.2
+        with:
+          find: "quay.io"
+          replace: "quay.dockerproxy.com"
+          include: |
+            **/*.json
