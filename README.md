@@ -239,11 +239,13 @@ If you are submitting PR's try and keep names and titles the same.
 [SteamCMD Servers](game_eggs/steamcmd_servers) These eggs use SteamCMD to install
 
 * [7 Days to Die](game_eggs/steamcmd_servers/7_days_to_die)
+* [ARK: Survival Ascended](game_eggs/steamcmd_servers/ark_survival_ascended)
 * [ARK: Survival Evolved](game_eggs/steamcmd_servers/ark_survival_evolved)
 * [Arma](game_eggs/steamcmd_servers/arma)
   * [Arma 3](game_eggs/steamcmd_servers/arma/arma3)
   * [Arma Reforger](game_eggs/steamcmd_servers/arma/arma_reforger)
 * [Assetto Corsa](game_eggs/steamcmd_servers/assetto_corsa)
+* [Astro Colony](game_eggs/steamcmd_servers/astro_colony)
 * [Astroneer](game_eggs/steamcmd_servers/astroneer)
 * [Avorion](game_eggs/steamcmd_servers/avorion)
 * [Barotrauma](game_eggs/steamcmd_servers/barotrauma)
