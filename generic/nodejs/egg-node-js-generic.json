@@ -36,7 +36,7 @@
     "variables": [
         {
             "name": "Git Repo Address",
-            "description": "GitHub Repo to clone\r\n\r\nI.E. https:\/\/ghproxy.com\/https:\/\/github.com\/parkervcp\/repo_name",
+            "description": "GitHub Repo to clone\r\n\r\nI.E. https:\/\/mirror.ghproxy.com\/https:\/\/github.com\/parkervcp\/repo_name",
             "env_variable": "GIT_ADDRESS",
             "default_value": "",
             "user_viewable": true,
@@ -96,7 +96,7 @@
         },
         {
             "name": "Git Access Token",
-            "description": "Password to use with git.\r\n\r\nIt's best practice to use a Personal Access Token.\r\nhttps:\/\/ghproxy.com\/https:\/\/github.com\/settings\/tokens\r\nhttps:\/\/gitlab.com\/-\/profile\/personal_access_tokens",
+            "description": "Password to use with git.\r\n\r\nIt's best practice to use a Personal Access Token.\r\nhttps:\/\/mirror.ghproxy.com\/https:\/\/github.com\/settings\/tokens\r\nhttps:\/\/gitlab.com\/-\/profile\/personal_access_tokens",
             "env_variable": "ACCESS_TOKEN",
             "default_value": "",
             "user_viewable": true,

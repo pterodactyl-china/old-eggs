@@ -22,7 +22,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/bash\r\n# Server Files: \/mnt\/server\r\napt update\r\napt install -y git\r\n\r\nmkdir -p \/mnt\/server\r\ncd \/mnt\/server\r\n\r\nINSTALL_REPO=\"https:\/\/ghproxy.com\/https:\/\/github.com\/OhMyGuus\/BetterCrewLink-server.git\"\r\necho -e Install repo set to ${INSTALL_REPO}\r\necho -e \"\/mnt\/server is empty.\\ncloning files from repo\"\r\necho -e \"running 'git clone --single-branch --branch ${BRANCH} ${INSTALL_REPO} .'\"\r\ngit clone --single-branch --branch ${BRANCH} ${INSTALL_REPO} .\r\n\r\nif [ -f \/mnt\/server\/package.json ]; then\r\n    \/usr\/local\/bin\/yarn install\r\nfi\r\n\r\necho -e \"install complete\"\r\nexit 0",
+            "script": "#!\/bin\/bash\r\n# Server Files: \/mnt\/server\r\napt update\r\napt install -y git\r\n\r\nmkdir -p \/mnt\/server\r\ncd \/mnt\/server\r\n\r\nINSTALL_REPO=\"https:\/\/mirror.ghproxy.com\/https:\/\/github.com\/OhMyGuus\/BetterCrewLink-server.git\"\r\necho -e Install repo set to ${INSTALL_REPO}\r\necho -e \"\/mnt\/server is empty.\\ncloning files from repo\"\r\necho -e \"running 'git clone --single-branch --branch ${BRANCH} ${INSTALL_REPO} .'\"\r\ngit clone --single-branch --branch ${BRANCH} ${INSTALL_REPO} .\r\n\r\nif [ -f \/mnt\/server\/package.json ]; then\r\n    \/usr\/local\/bin\/yarn install\r\nfi\r\n\r\necho -e \"install complete\"\r\nexit 0",
             "container": "node:12-buster-slim",
             "entrypoint": "bash"
         }

@@ -202,7 +202,7 @@
         },
         {
             "name": "[Advanced] Enable RCON",
-            "description": "See the following link for info on how to connect and use RCON: https:\/\/ghproxy.com\/https:\/\/github.com\/StunlockStudios\/vrising-dedicated-server-instructions#rcon",
+            "description": "See the following link for info on how to connect and use RCON: https:\/\/mirror.ghproxy.com\/https:\/\/github.com\/StunlockStudios\/vrising-dedicated-server-instructions#rcon",
             "env_variable": "RCON",
             "default_value": "false",
             "user_viewable": true,

@@ -30,7 +30,7 @@
     "variables": [
         {
             "name": "Install Version",
-            "description": "Specify the version to install from https:\/\/ghproxy.com\/https:\/\/github.com\/UnknownShadow200\/MCGalaxy\/releases. Leave latest to install the latest version.",
+            "description": "Specify the version to install from https:\/\/mirror.ghproxy.com\/https:\/\/github.com\/UnknownShadow200\/MCGalaxy\/releases. Leave latest to install the latest version.",
             "env_variable": "VERSION",
             "default_value": "latest",
             "user_viewable": true,

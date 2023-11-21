@@ -60,7 +60,7 @@
         },
         {
             "name": "Enable Mod Loader",
-            "description": "See: https:\/\/ghproxy.com\/https:\/\/github.com\/neos-modding-group\/NeosModLoader for more information on Neos Mod Loader.",
+            "description": "See: https:\/\/mirror.ghproxy.com\/https:\/\/github.com\/neos-modding-group\/NeosModLoader for more information on Neos Mod Loader.",
             "env_variable": "ENABLE_MODLOADER",
             "default_value": "false",
             "user_viewable": true,

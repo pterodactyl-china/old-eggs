@@ -17,7 +17,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/ash\r\n# Pixel Bot Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\napt update\r\napt -y install git\r\n\r\ncd \/mnt\/server\r\n\r\necho \"Cloning pixel-bot repo\"\r\ngit clone https:\/\/ghproxy.com\/https:\/\/github.com\/BigBrotherBot\/big-brother-bot.git .\r\n\r\necho \"Installing python requirements into folder\"\r\npip install -U --target \/mnt\/server -r requirements.txt\r\npip install -U --target \/mnt\/server paramiko",
+            "script": "#!\/bin\/ash\r\n# Pixel Bot Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\napt update\r\napt -y install git\r\n\r\ncd \/mnt\/server\r\n\r\necho \"Cloning pixel-bot repo\"\r\ngit clone https:\/\/mirror.ghproxy.com\/https:\/\/github.com\/BigBrotherBot\/big-brother-bot.git .\r\n\r\necho \"Installing python requirements into folder\"\r\npip install -U --target \/mnt\/server -r requirements.txt\r\npip install -U --target \/mnt\/server paramiko",
             "container": "python:2.7-slim",
             "entrypoint": "bash"
         }

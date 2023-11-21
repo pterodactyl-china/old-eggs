@@ -32,7 +32,7 @@
             "name": "5e Tools Repository",
             "description": "Git Repository to use for cloning 5e Tools",
             "env_variable": "REPOSITORY",
-            "default_value": "https:\/\/ghproxy.com\/https:\/\/github.com\/5etools-mirror-1\/5etools-mirror-1.github.io",
+            "default_value": "https:\/\/mirror.ghproxy.com\/https:\/\/github.com\/5etools-mirror-1\/5etools-mirror-1.github.io",
             "user_viewable": false,
             "user_editable": false,
             "rules": "required|url",
