@@ -30,6 +30,7 @@ If you are submitting PR's try and keep names and titles the same.
 
 **注:** 这些是真正的 Discord 机器人预设，而不是语言预设。 旧的语言预设（discord-js-generic、discord-py-generic 等）已移至 [通用语言部分](#通用语言).
 
+* [Aoede](/bots/discord/aoede) Rust
 * [ATL Bot](/bots/discord/atlbot) Node JS
 * [Bastion](/bots/discord/bastion) Node JS
 * [CorpBot](/bots/discord/corpbot) Python
@@ -166,11 +167,7 @@ If you are submitting PR's try and keep names and titles the same.
 
 [Mindustry](game_eggs/mindustry)
 
-* [Mindustry](game_eggs/mindustry)
-
 [Minetest](game_eggs/minetest) (including MTG)
-
-* [Minetest](game_eggs/minetest)
 
 [Minecraft](game_eggs/minecraft)
 
@@ -254,6 +251,7 @@ If you are submitting PR's try and keep names and titles the same.
 * [BATTALION: Legacy](game_eggs/steamcmd_servers/battalion_legacy)
 * [Black Mesa](game_eggs/steamcmd_servers/black_mesa)
 * [Citadel: Forged with Fire](game_eggs/steamcmd_servers/citadel)
+* [Colony Survival](game_eggs/steamcmd_servers/colony_survival)
 * [Conan Exiles](game_eggs/steamcmd_servers/conan_exiles)
 * [Core Keeper](game_eggs/steamcmd_servers/core_keeper)
 * [Counter-Strike](game_eggs/steamcmd_servers/counter_strike/)
@@ -271,6 +269,7 @@ If you are submitting PR's try and keep names and titles the same.
   * [HLDS Vanilla](game_eggs/steamcmd_servers/hlds_server/vanilla)
   * [ReHLDS](game_eggs/steamcmd_servers/hlds_server/rehlds)
 * [Holdfast: Nations At War](game_eggs/steamcmd_servers/holdfast)
+* [HumanitZ](game_eggs/steamcmd_servers/humanitz)
 * [Hurtworld](game_eggs/steamcmd_servers/hurtworld)
 * [Icarus](game_eggs/steamcmd_servers/icarus)
 * [Insurgency: Sandstorm](game_eggs/steamcmd_servers/insurgency_sandstorm)
@@ -278,6 +277,7 @@ If you are submitting PR's try and keep names and titles the same.
 * [Killing Floor 2](game_eggs/steamcmd_servers/killing_floor_2)
 * [Left 4 Dead](game_eggs/steamcmd_servers/left4dead)
 * [Left 4 Dead 2](game_eggs/steamcmd_servers/left4dead_2)
+* [Longvinter](game_eggs/steamcmd_servers/longvinter)
 * [Modiverse](game_eggs/steamcmd_servers/modiverse)
 * [Mordhau](game_eggs/steamcmd_servers/mordhau)
 * [Mount & Blade II: Bannerlord](game_eggs/steamcmd_servers/mount_blade_II_bannerlord)
@@ -304,7 +304,6 @@ If you are submitting PR's try and keep names and titles the same.
 * [SCP: Secret Laboratory](game_eggs/steamcmd_servers/scpsl)
   * [dedicated](game_eggs/steamcmd_servers/scpsl/dedicated)
   * [exiled](game_eggs/steamcmd_servers/scpsl/exiled)
-  * [multiadmin](game_eggs/steamcmd_servers/scpsl/multiadmin)
 * [Soldat](game_eggs/steamcmd_servers/soldat)
 * [Sons of the Forest](game_eggs/steamcmd_servers/sonsoftheforest)
 * [Space Engineers](game_eggs/steamcmd_servers/space_engineers)
@@ -313,6 +312,8 @@ If you are submitting PR's try and keep names and titles the same.
 * [Squad](game_eggs/steamcmd_servers/squad)
 * [Starbound](game_eggs/steamcmd_servers/starbound)
 * [Stationeers](game_eggs/steamcmd_servers/stationeers)
+  * [Stationeers Vanilla](game_eggs/steamcmd_servers/stationeers/stationeers_vanilla)
+  * [Stationeers BepInEx](game_eggs/steamcmd_servers/stationeers/stationeers_bepinex)
 * [Stormworks: Build and Rescue](game_eggs/steamcmd_servers/stormworks)
 * [Subnautica: Nitrox Mod](game_eggs/steamcmd_servers/subnautica_nitrox_mod)
 * [Sven Co-op](game_eggs/steamcmd_servers/svencoop)
@@ -334,7 +335,7 @@ If you are submitting PR's try and keep names and titles the same.
   * [Valheim Vanilla](game_eggs/steamcmd_servers/valheim/valheim_vanilla)
   * [Valheim BepInEx](game_eggs/steamcmd_servers/valheim/valheim_bepinex)
   * [Valheim Plus Mod](game_eggs/steamcmd_servers/valheim/valheim_plus)
-
+* [Wurm Unlimited](game_eggs/steamcmd_servers/wurm_unlimited/)
 
 [Teeworlds](game_eggs/teeworlds)
 

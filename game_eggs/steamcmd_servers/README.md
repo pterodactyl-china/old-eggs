@@ -8,7 +8,7 @@ This is a collection of servers that use SteamCMD to install.
 
 ## ARK: Survival Ascended
 
-[ARK: Survival Ascended](ark_survival_asceneded)
+[ARK: Survival Ascended](ark_survival_ascended)
 
 ## ARK: Survival Evolved
 
@@ -47,6 +47,10 @@ This is a collection of servers that use SteamCMD to install.
 ## Citadel: Forged with Fire
 
 [citadel](citadel)
+
+## Colony Survival
+
+[Colony Survival](colony_survival)
 
 ## Conan Exiles
 
@@ -102,6 +106,10 @@ This is a collection of servers that use SteamCMD to install.
 
 [Holdfast: Nations At War](holdfast)
 
+## HumanitZ
+
+[HumanitZ](humanitz)
+
 ## Hurtworld
 
 [Hurtworld](hurtworld)
@@ -129,6 +137,9 @@ This is a collection of servers that use SteamCMD to install.
 ## Left 4 Dead 2
 
 [Left 4 Dead](left4dead_2)
+
+## Longvinter
+[Longvinter](longvinter)
 
 ## Modiverse
 
@@ -217,7 +228,6 @@ This is a collection of servers that use SteamCMD to install.
 * [SCP: Secret Laboratory](scpsl)
   * [dedicated](scpsl/dedicated)
   * [exiled](scpsl/exiled)
-  * [multiadmin](scpsl/multiadmin)
 
 ## Solace Crafting
 
@@ -248,6 +258,8 @@ This is a collection of servers that use SteamCMD to install.
 ## Stationeers
 
 [Stationeers](stationeers)
+  * [Stationeers Vanilla](stationeers/stationeers_vanilla)
+  * [Stationeers BepInEx](stationeers/stationeers_bepinex)
 
 ## Stormworks: Build and Rescue
 
@@ -308,3 +320,6 @@ This is a collection of servers that use SteamCMD to install.
   * [Valheim Vanilla](valheim/valheim_vanilla)
   * [Valheim BepInEx](valheim/valheim_bepinex)
   * [Valheim Plus Mod](valheim/valheim_plus)
+
+## Wurm Unlimited
+* [Wurm Unlimited](wurm_unlimited/)
