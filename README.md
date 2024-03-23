@@ -256,12 +256,15 @@ If you are submitting PR's try and keep names and titles the same.
 * [Core Keeper](game_eggs/steamcmd_servers/core_keeper)
 * [Counter-Strike](game_eggs/steamcmd_servers/counter_strike/)
   * [Counter-Strike: Source](game_eggs/steamcmd_servers/counter_strike/counter_strike_source/)
+  * [Counter-Strike 2](game_eggs/steamcmd_servers/counter_strike/counter_strike_2/)
 * [Craftopia](game_eggs/steamcmd_servers/craftopia)
 * [Cryofall](game_eggs/steamcmd_servers/cryofall)
 * [DayZ (Experimental)](game_eggs/steamcmd_servers/dayz-experimental)
+* [Dead Matter](game_eggs/steamcmd_servers/dead_matter)
 * [Don't Starve Together](game_eggs/steamcmd_servers/dont_starve)
 * [ECO](game_eggs/steamcmd_servers/eco)
 * [Empyrion - Galactic Survival](game_eggs/steamcmd_servers/empyrion)
+* [Enshrouded](game_eggs/steamcmd_servers/enshrouded)
 * [Fistful of Frags](game_eggs/steamcmd_servers/fof)
 * [Frozen Flame](game_eggs/steamcmd_servers/frozen_flame)
 * [Ground Branch](game_eggs/steamcmd_servers/ground_branch)
@@ -281,12 +284,15 @@ If you are submitting PR's try and keep names and titles the same.
 * [Modiverse](game_eggs/steamcmd_servers/modiverse)
 * [Mordhau](game_eggs/steamcmd_servers/mordhau)
 * [Mount & Blade II: Bannerlord](game_eggs/steamcmd_servers/mount_blade_II_bannerlord)
+* [Myth of Empires](game_eggs/steamcmd_servers/myth_of_empires)
+* [Necesse](game_eggs/steamcmd_servers/necesse)
 * [Neos VR](game_eggs/steamcmd_servers/neosvr)
 * [No More Room in Hell](game_eggs/steamcmd_servers/nmrih)
 * [No One Survived](game_eggs/steamcmd_servers/no_one_survived)
 * [Onset](game_eggs/steamcmd_servers/onset)
 * [Open Fortress](game_eggs/steamcmd_servers/open_fortress)
 * [Operation Harsh Doorstop](game_eggs/steamcmd_servers/operation_harsh_doorstop)
+* [Palworld](game_eggs/steamcmd_servers/palworld)
 * [Pavlov VR](game_eggs/steamcmd_servers/pavlov_vr)
 * [PixARK](game_eggs/steamcmd_servers/pixark)
 * [Portal Knights](game_eggs/steamcmd_servers/portal_knights)
@@ -300,10 +306,11 @@ If you are submitting PR's try and keep names and titles the same.
   * [Autowipe](game_eggs/steamcmd_servers/rust/rust_autowipe)
   * [Staging](game_eggs/steamcmd_servers/rust/rust_staging)
 * [Satisfactory](game_eggs/steamcmd_servers/satisfactory)
-* [Solace Crafting](game_eggs/steamcmd_servers/solace_crafting)
 * [SCP: Secret Laboratory](game_eggs/steamcmd_servers/scpsl)
   * [dedicated](game_eggs/steamcmd_servers/scpsl/dedicated)
   * [exiled](game_eggs/steamcmd_servers/scpsl/exiled)
+* [Smalland: Survive the Wilds](game_eggs/steamcmd_servers/smalland_survive_the_wilds)
+* [Solace Crafting](game_eggs/steamcmd_servers/solace_crafting)
 * [Soldat](game_eggs/steamcmd_servers/soldat)
 * [Sons of the Forest](game_eggs/steamcmd_servers/sonsoftheforest)
 * [Space Engineers](game_eggs/steamcmd_servers/space_engineers)
@@ -335,6 +342,7 @@ If you are submitting PR's try and keep names and titles the same.
   * [Valheim Vanilla](game_eggs/steamcmd_servers/valheim/valheim_vanilla)
   * [Valheim BepInEx](game_eggs/steamcmd_servers/valheim/valheim_bepinex)
   * [Valheim Plus Mod](game_eggs/steamcmd_servers/valheim/valheim_plus)
+* [VEIN](game_eggs/steamcmd_servers/vein)
 * [Wurm Unlimited](game_eggs/steamcmd_servers/wurm_unlimited/)
 
 [Teeworlds](game_eggs/teeworlds)
@@ -352,6 +360,8 @@ If you are submitting PR's try and keep names and titles the same.
 * [OpenRCT2](game_eggs/tycoon_games/openrct2)
 * [OpenTTD](game_eggs/tycoon_games/openttd)
 
+[UrbanTerror](game_eggs/urbanterror)
+
 [Veloren](game_eggs/veloren)
 
 [Vintage Story](game_eggs/vintage_story)
@@ -359,8 +369,6 @@ If you are submitting PR's try and keep names and titles the same.
 [Wine Generic](game_eggs/wine/generic)
 
 [Xonotic](game_eggs/xonotic/xonotic)
-
-[YuzuEmu](game_eggs/yuzu-emu)
 
 [FoundryVTT](game_eggs/FoundryVTT)
 
@@ -397,6 +405,10 @@ If you are submitting PR's try and keep names and titles the same.
 ### Folding@Home
 
 * [Folding@Home](/software/foldingathome)
+
+### Forgejo
+
+* [Forgejo](/software/forgejo)
 
 ### Gitea
 

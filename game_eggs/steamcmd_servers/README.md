@@ -60,6 +60,10 @@ This is a collection of servers that use SteamCMD to install.
 
 [Core Keeper](core_keeper)
 
+## Counter-Strike
+
+[Counter-Strike](counter_strike)
+
 ## Craftopia
 
 [Craftopia](craftopia)
@@ -72,6 +76,10 @@ This is a collection of servers that use SteamCMD to install.
 
 [DayZ (Experimental)](dayz-experimental)
 
+## Dead Matter
+
+[Dead Matter](dead_matter)
+
 ## Don't Starve Together
 
 [Don't Starve Together](dont_starve)
@@ -83,6 +91,10 @@ This is a collection of servers that use SteamCMD to install.
 ## Empyrion
 
 [Empyrion - Galactic Survival](empyrion)
+
+## Enshrouded
+
+[Enshrouded](enshrouded)
 
 ## Fistful of Frags
 
@@ -153,6 +165,14 @@ This is a collection of servers that use SteamCMD to install.
 
 [Mount & Blade II: Bannerlord](mount_blade_II_bannerlord)
 
+## Myth of Empires
+
+[Myth of Empires](myth_of_empires)
+
+## Necesse
+
+[Necesse](necesse)
+
 ## Neos VR
 [Neos VR](neosvr)
 
@@ -175,6 +195,10 @@ This is a collection of servers that use SteamCMD to install.
 ## Operation Harsh Doorstop
 
 [Operation Harsh Doorstop](operation_harsh_doorstop)
+
+## Palworld
+
+[Palworld](palworld)
 
 ## Pavlov VR
 
@@ -228,6 +252,10 @@ This is a collection of servers that use SteamCMD to install.
 * [SCP: Secret Laboratory](scpsl)
   * [dedicated](scpsl/dedicated)
   * [exiled](scpsl/exiled)
+
+## Smalland: Survive the Wilds
+
+[Smalland: Survive the Wilds](smalland_survive_the_wilds)
 
 ## Solace Crafting
 
@@ -321,5 +349,9 @@ This is a collection of servers that use SteamCMD to install.
   * [Valheim BepInEx](valheim/valheim_bepinex)
   * [Valheim Plus Mod](valheim/valheim_plus)
 
+## VEIN
+
+[VEIN](vein)
+
 ## Wurm Unlimited
-* [Wurm Unlimited](wurm_unlimited/)
+[Wurm Unlimited](wurm_unlimited/)

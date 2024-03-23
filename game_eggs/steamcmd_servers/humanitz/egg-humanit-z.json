@@ -4,9 +4,9 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2023-12-25T11:27:01+01:00",
+    "exported_at": "2024-02-26T18:43:46+01:00",
     "name": "HumanitZ",
-    "author": "admin@marx.ps",
+    "author": "engels74@marx.ps",
     "description": "HumanitZ is a co-op, isometric, open world survival game in a world ended by the zombie outbreak. As one of the few human survivors, try to last as long as \u201chumanly\u201d possible. The past can\u2019t be changed, but you can make a difference today for the future of humanity.",
     "features": null,
     "docker_images": {
@@ -15,7 +15,7 @@
     "file_denylist": [],
     "startup": ".\/TSSGame\/Binaries\/Linux\/TSSGameServer-Linux-Shipping TSSGame -log -port={{SERVER_PORT}} -queryport={{QUERY_PORT}} -steamservername=\"{{SERVER_NAME}}\"",
     "config": {
-        "files": "{\r\n    \"TSSGame\/GameServerSettings.ini\": {\r\n        \"parser\": \"file\",\r\n        \"find\": {\r\n            \"ServerName=\": \"ServerName={{server.build.env.SERVER_NAME}}\",\r\n            \"Password=\\\"\\\"\": \"Password=\\\"{{server.build.env.PASSWORD}}\\\"\",\r\n            \"SaveName=\\\"\\\"\": \"SaveName=\\\"{{server.build.env.SAVE_NAME}}\\\"\",\r\n            \"AdminPass=\\\"\\\"\": \"AdminPass=\\\"{{server.build.env.ADMIN_PASS}}\\\"\",\r\n            \"MaxPlayers=\": \"MaxPlayers={{server.build.env.MAX_PLAYERS}}\",\r\n            \"OnlyAllowedPlayers=\": \"OnlyAllowedPlayers={{server.build.env.ONLY_ALLOWED_PLAYERS}}\",\r\n            \"SaveIntervalSec=\": \"SaveIntervalSec={{server.build.env.SAVE_INTERVAL_SEC}}\",\r\n            \"NoDeathFeedback=\": \"NoDeathFeedback={{server.build.env.NO_DEATH_FEEDBACK}}\",\r\n            \"PermaDeath=\": \"PermaDeath={{server.build.env.PERMA_DEATH}}\",\r\n            \"OnDeath=\": \"OnDeath={{server.build.env.ON_DEATH}}\",\r\n            \"PVP=\": \"PVP={{server.build.env.PVP}}\",\r\n            \"ClearInfection=\": \"ClearInfection={{server.build.env.CLEAR_INFECTION}}\",\r\n            \"EagleEye=\": \"EagleEye={{server.build.env.EAGLE_EYE}}\",\r\n            \"AirDrop=\": \"AirDrop={{server.build.env.AIR_DROP}}\",\r\n            \"WeaponBreak=\": \"WeaponBreak={{server.build.env.WEAPON_BREAK}}\",\r\n            \"MultiplayerSleep=\": \"MultiplayerSleep={{server.build.env.MULTIPLAYER_SLEEP}}\",\r\n            \"LootRespawn=\": \"LootRespawn={{server.build.env.LOOT_RESPAWN}}\",\r\n            \"LootRespawnTimer=\": \"LootRespawnTimer={{server.build.env.LOOT_RESPAWN_TIMER}}\",\r\n            \"LootRarity=\": \"LootRarity={{server.build.env.LOOT_RARITY}}\",\r\n            \"AirDropInterval=\": \"AirDropInterval={{server.build.env.AIR_DROP_INTERVAL}}\",\r\n            \"ZombieDiffHealth=\": \"ZombieDiffHealth={{server.build.env.ZOMBIE_DIFF_HEALTH}}\",\r\n            \"ZombieDiffSpeed=\": \"ZombieDiffSpeed={{server.build.env.ZOMBIE_DIFF_SPEED}}\",\r\n            \"ZombieDiffDamage=\": \"ZombieDiffDamage={{server.build.env.ZOMBIE_DIFF_DAMAGE}}\",\r\n            \"HumanDifficulty=\": \"HumanDifficulty={{server.build.env.HUMAN_DIFFICULTY}}\",\r\n            \"ZombieAmountMulti=\": \"ZombieAmountMulti={{server.build.env.ZOMBIE_AMOUNT_MULTI}}\",\r\n            \"HumanAmountMulti=\": \"HumanAmountMulti={{server.build.env.HUMAN_AMOUNT_MULTI}}\",\r\n            \"ZombieDogMulti=\": \"ZombieDogMulti={{server.build.env.ZOMBIE_DOG_MULTI}}\",\r\n            \"ZombieRespawnTimer=\": \"ZombieRespawnTimer={{server.build.env.ZOMBIE_RESPAWN_TIMER}}\",\r\n            \"HumanRespawnTimer=\": \"HumanRespawnTimer={{server.build.env.HUMAN_RESPAWN_TIMER}}\",\r\n            \"AnimalRespawnTimer=\": \"AnimalRespawnTimer={{server.build.env.ANIMAL_RESPAWN_TIMER}}\",\r\n            \"StartingSeason=\": \"StartingSeason={{server.build.env.STARTING_SEASON}}\",\r\n            \"DaysPerSeason=\": \"DaysPerSeason={{server.build.env.DAYS_PER_SEASON}}\",\r\n            \"DayDur=\": \"DayDur={{server.build.env.DAY_DUR}}\",\r\n            \"NightDur=\": \"NightDur={{server.build.env.NIGHT_DUR}}\",\r\n            \"VitalDrain=\": \"VitalDrain={{server.build.env.VITAL_DRAIN}}\",\r\n            \"DogEnabled=\": \"DogEnabled={{server.build.env.DOG_ENABLED}}\",\r\n            \"DogNum=\": \"DogNum={{server.build.env.DOG_NUM}}\",\r\n            \"RecruitDog=\": \"RecruitDog={{server.build.env.RECRUIT_DOG}}\",\r\n            \"BuildingHealth=\": \"BuildingHealth={{server.build.env.BUILDING_HEALTH}}\",\r\n            \"CompanionHealth=\": \"CompanionHealth={{server.build.env.COMPANION_HEALTH}}\",\r\n            \"CompanionDmg=\": \"CompanionDmg={{server.build.env.COMPANION_DMG}}\"\r\n        }\r\n    }\r\n}",
+        "files": "{\r\n    \"TSSGame\/GameServerSettings.ini\": {\r\n        \"parser\": \"ini\",\r\n        \"find\": {\r\n            \"[Host Settings].ServerName\": \"{{server.build.env.SERVER_NAME}}\",\r\n            \"[Host Settings].Password\": \"{{server.build.env.PASSWORD}}\",\r\n            \"[Host Settings].SaveName\": \"{{server.build.env.SAVE_NAME}}\",\r\n            \"[Host Settings].AdminPass\": \"{{server.build.env.ADMIN_PASS}}\",\r\n            \"[Host Settings].MaxPlayers\": \"{{server.build.env.MAX_PLAYERS}}\",\r\n            \"[Host Settings].OnlyAllowedPlayers\": \"{{server.build.env.ONLY_ALLOWED_PLAYERS}}\",\r\n            \"[World Settings].SaveIntervalSec\": \"{{server.build.env.SAVE_INTERVAL_SEC}}\",\r\n            \"[World Settings].NoDeathFeedback\": \"{{server.build.env.NO_DEATH_FEEDBACK}}\",\r\n            \"[World Settings].PermaDeath\": \"{{server.build.env.PERMA_DEATH}}\",\r\n            \"[World Settings].OnDeath\": \"{{server.build.env.ON_DEATH}}\",\r\n            \"[World Settings].PVP\": \"{{server.build.env.PVP}}\",\r\n            \"[World Settings].ClearInfection\": \"{{server.build.env.CLEAR_INFECTION}}\",\r\n            \"[World Settings].EagleEye\": \"{{server.build.env.EAGLE_EYE}}\",\r\n            \"[World Settings].AirDrop\": \"{{server.build.env.AIR_DROP}}\",\r\n            \"[World Settings].WeaponBreak\": \"{{server.build.env.WEAPON_BREAK}}\",\r\n            \"[World Settings].MultiplayerSleep\": \"{{server.build.env.MULTIPLAYER_SLEEP}}\",\r\n            \"[World Settings].LootRespawn\": \"{{server.build.env.LOOT_RESPAWN}}\",\r\n            \"[World Settings].LootRespawnTimer\": \"{{server.build.env.LOOT_RESPAWN_TIMER}}\",\r\n            \"[World Settings].PickupRespawnTimer\": \"{{server.build.env.PICKUP_RESPAWN_TIMER}}\",\r\n            \"[World Settings].LootRarity\": \"{{server.build.env.LOOT_RARITY}}\",\r\n            \"[World Settings].AirDropInterval\": \"{{server.build.env.AIR_DROP_INTERVAL}}\",\r\n            \"[World Settings].ZombieDiffHealth\": \"{{server.build.env.ZOMBIE_DIFF_HEALTH}}\",\r\n            \"[World Settings].ZombieDiffSpeed\": \"{{server.build.env.ZOMBIE_DIFF_SPEED}}\",\r\n            \"[World Settings].ZombieDiffDamage\": \"{{server.build.env.ZOMBIE_DIFF_DAMAGE}}\",\r\n            \"[World Settings].HumanDifficulty\": \"{{server.build.env.HUMAN_DIFFICULTY}}\",\r\n            \"[World Settings].ZombieAmountMulti\": \"{{server.build.env.ZOMBIE_AMOUNT_MULTI}}\",\r\n            \"[World Settings].HumanAmountMulti\": \"{{server.build.env.HUMAN_AMOUNT_MULTI}}\",\r\n            \"[World Settings].ZombieDogMulti\": \"{{server.build.env.ZOMBIE_DOG_MULTI}}\",\r\n            \"[World Settings].ZombieRespawnTimer\": \"{{server.build.env.ZOMBIE_RESPAWN_TIMER}}\",\r\n            \"[World Settings].HumanRespawnTimer\": \"{{server.build.env.HUMAN_RESPAWN_TIMER}}\",\r\n            \"[World Settings].AnimalRespawnTimer\": \"{{server.build.env.ANIMAL_RESPAWN_TIMER}}\",\r\n            \"[World Settings].StartingSeason\": \"{{server.build.env.STARTING_SEASON}}\",\r\n            \"[World Settings].DaysPerSeason\": \"{{server.build.env.DAYS_PER_SEASON}}\",\r\n            \"[World Settings].DayDur\": \"{{server.build.env.DAY_DUR}}\",\r\n            \"[World Settings].NightDur\": \"{{server.build.env.NIGHT_DUR}}\",\r\n            \"[World Settings].VitalDrain\": \"{{server.build.env.VITAL_DRAIN}}\",\r\n            \"[World Settings].DogEnabled\": \"{{server.build.env.DOG_ENABLED}}\",\r\n            \"[World Settings].DogNum\": \"{{server.build.env.DOG_NUM}}\",\r\n            \"[World Settings].RecruitDog\": \"{{server.build.env.RECRUIT_DOG}}\",\r\n            \"[World Settings].BuildingHealth\": \"{{server.build.env.BUILDING_HEALTH}}\",\r\n            \"[World Settings].CompanionHealth\": \"{{server.build.env.COMPANION_HEALTH}}\",\r\n            \"[World Settings].CompanionDmg\": \"{{server.build.env.COMPANION_DMG}}\",\r\n            \"[World Settings].AllowDismantle\": \"{{server.build.env.ALLOW_DISMANTLE}}\",\r\n            \"[World Settings].AllowHouseDismantle\": \"{{server.build.env.ALLOW_HOUSE_DISMANTLE}}\",\r\n            \"[World Settings].Territory\": \"{{server.build.env.TERRITORY}}\",\r\n            \"[World Settings].Decay\": \"{{server.build.env.DECAY}}\",\r\n            \"[World Settings].PickupCleanup\": \"{{server.build.env.PICKUP_CLEANUP}}\",\r\n            \"[World Settings].FakeBuildingCleanup\": \"{{server.build.env.FAKE_BUILDING_CLEANUP}}\"\r\n        }\r\n    }\r\n}",
         "startup": "{\r\n    \"done\": \"LogKaiHelper: Session created!\"\r\n}",
         "logs": "{}",
         "stop": "^C"
@@ -29,7 +29,7 @@
     },
     "variables": [
         {
-            "name": "Steam App ID",
+            "name": "[REQUIRED] Steam App ID",
             "description": "Steam App ID of HumanitZ Server",
             "env_variable": "SRCDS_APPID",
             "default_value": "2728330",
@@ -72,7 +72,7 @@
             "name": "Server Name",
             "description": "Name of the server",
             "env_variable": "SERVER_NAME",
-            "default_value": "My HumanitZ Server",
+            "default_value": "HumanitZ [Dedicated]",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|string",
@@ -112,7 +112,7 @@
             "name": "Max Players",
             "description": "Maximum number of players allowed",
             "env_variable": "MAX_PLAYERS",
-            "default_value": "32",
+            "default_value": "16",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|numeric",
@@ -130,7 +130,7 @@
         },
         {
             "name": "Saving World Interval",
-            "description": "Save game every X seconds",
+            "description": "Save game every x seconds.",
             "env_variable": "SAVE_INTERVAL_SEC",
             "default_value": "300",
             "user_viewable": true,
@@ -140,7 +140,7 @@
         },
         {
             "name": "Permanent Death",
-            "description": "0=Off, 1=Individual, 2=All",
+            "description": "0=Off, 1=Individual perma-death, 2=All players experience perma-death",
             "env_variable": "PERMA_DEATH",
             "default_value": "0",
             "user_viewable": true,
@@ -150,7 +150,7 @@
         },
         {
             "name": "On Death",
-            "description": "0=Only lose backpack and weapon in hand, 1=Previous + pockets and backpack, 2=All previous + Equipment",
+            "description": "0=Only lose backpack, and weapon in hand, 1=Previous + pockets, and backpack, 2=All previous + Equipment",
             "env_variable": "ON_DEATH",
             "default_value": "2",
             "user_viewable": true,
@@ -160,7 +160,7 @@
         },
         {
             "name": "PvP",
-            "description": "Enable or Disable PvP\r\n0= Off, 1= On",
+            "description": "0\/1 Off\/On. Enable or disable Player vs Player.",
             "env_variable": "PVP",
             "default_value": "1",
             "user_viewable": true,
@@ -190,7 +190,7 @@
         },
         {
             "name": "Air Drop",
-            "description": "1=Enabled, 0=Disabled",
+            "description": "1=Enabled, 0=Disabled. Controls whether air drops are enabled.",
             "env_variable": "AIR_DROP",
             "default_value": "1",
             "user_viewable": true,
@@ -200,7 +200,7 @@
         },
         {
             "name": "Weapon Durability",
-            "description": "1=Weapons break when reaching 0% durability except crow bar, 0=Only improvised break at 0% durability",
+            "description": "1=Weapons break when reaching 0% durability except crowbar, 0=Only improvised weapons break at 0% durability",
             "env_variable": "WEAPON_BREAK",
             "default_value": "1",
             "user_viewable": true,
@@ -220,7 +220,7 @@
         },
         {
             "name": "Building Health",
-            "description": "Nothing provided in docs regarding this variable. Default value is \"1\".",
+            "description": "Health multiplier of player placed buildings. By default set to \"1\".",
             "env_variable": "BUILDING_HEALTH",
             "default_value": "1",
             "user_viewable": true,
@@ -230,8 +230,28 @@
         },
         {
             "name": "Loot Respawn",
-            "description": "If loot respawns, how long does it take in seconds",
+            "description": "1=Loot does respawn, 0=Never respawn",
+            "env_variable": "LOOT_RESPAWN",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "Loot Respawn Timer",
+            "description": "If loot respawns how long does it take in minutes",
             "env_variable": "LOOT_RESPAWN_TIMER",
+            "default_value": "60",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric",
+            "field_type": "text"
+        },
+        {
+            "name": "Pickup Respawn Timer",
+            "description": "Time in minutes it takes to respawn pickups, 0 to disable.",
+            "env_variable": "PICKUP_RESPAWN_TIMER",
             "default_value": "90",
             "user_viewable": true,
             "user_editable": true,
@@ -262,7 +282,7 @@
             "name": "Zombie Difficulty (Health)",
             "description": "0=Very Easy, 1=Easy, 2=Default, 3=Hard, 4=Very Hard, 5=Nightmare",
             "env_variable": "ZOMBIE_DIFF_HEALTH",
-            "default_value": "3",
+            "default_value": "1",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|numeric",
@@ -272,7 +292,7 @@
             "name": "Zombie Difficulty (Speed)",
             "description": "0=Very Easy, 1=Easy, 2=Default, 3=Hard, 4=Very Hard, 5=Nightmare",
             "env_variable": "ZOMBIE_DIFF_SPEED",
-            "default_value": "3",
+            "default_value": "2",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|numeric",
@@ -422,7 +442,7 @@
             "name": "Dog Companion Amount",
             "description": "Number of companion dogs that could spawn randomly",
             "env_variable": "DOG_NUM",
-            "default_value": "4",
+            "default_value": "8",
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|numeric",
@@ -466,6 +486,66 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "Allow Dismantle",
+            "description": "1 = Enable players to dismantle their own buildings, 0 = Disable",
+            "env_variable": "ALLOW_DISMANTLE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "Allow House Dismantle",
+            "description": "1 = Players are able to dismantle house props, 0 = Disable",
+            "env_variable": "ALLOW_HOUSE_DISMANTLE",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "Territory",
+            "description": "1 = Enabled. In PVE you are not allowed to build in someone's spawn point area. Only non recruit clan members can. 0 = Disable",
+            "env_variable": "TERRITORY",
+            "default_value": "1",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|boolean",
+            "field_type": "text"
+        },
+        {
+            "name": "Decay",
+            "description": "By default 3600, the crafted \"Spawn Point\" loses 1 durability every 1 hour. This is used to deal with territory build restrictions, so players have to repair their spawn point.",
+            "env_variable": "DECAY",
+            "default_value": "3600",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric",
+            "field_type": "text"
+        },
+        {
+            "name": "Pickup Cleanup",
+            "description": "How long in minutes it takes for dropped pickups to be destroyed (Pickups part of the world will not be considered), a value of 0 means no cleanup is done.",
+            "env_variable": "PICKUP_CLEANUP",
+            "default_value": "3000",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric",
+            "field_type": "text"
+        },
+        {
+            "name": "Fake Building Cleanup",
+            "description": "How long in minutes it takes for the white blueprint building to be destroyed, a value of 0 means no cleanup is done.",
+            "env_variable": "FAKE_BUILDING_CLEANUP",
+            "default_value": "3000",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|numeric",
             "field_type": "text"
         }
     ]
