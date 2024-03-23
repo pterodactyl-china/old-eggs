@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "docker_images": {
-        "ghcr.io\/parkervcp\/yolks:wine_latest": "ghcr.io\/parkervcp\/yolks:wine_latest"
+        "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:wine_latest": "registry.cn-shanghai.aliyuncs.com\/pterodactyl-images\/yolks:wine_latest"
     },
     "file_denylist": [],
     "startup": "export WINEDLLOVERRIDES=\"mscoree=n,b;mshtml=n,b\"; wine \/home\/container\/Torch.Server.exe -noupdate -nogui -console",
